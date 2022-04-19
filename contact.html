@@ -1,14 +1,14 @@
 <html>
 <head>
-<link rel="stylesheet" href="mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 </head>
-	
-<ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="gallery.html">Gallery</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="about.html">About</a></li>
-</ul>
+<body>
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
 
 
 <div class="container paddingContact-container">
@@ -98,4 +98,5 @@
 <div class="map-area">
   <div id="map-canvas" style="height: 750px; width: 100%;"></div>
 </div>
+	</body>
 </html>
