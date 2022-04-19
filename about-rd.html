@@ -1,0 +1,44 @@
+<html>
+
+	
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+</head>
+<body>
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
+  
+<style>
+    {
+        box-sizing: border-box;
+    }
+    /* Set additional styling options for the columns*/
+    .column {
+    float: left;
+    width: 50%;
+    }
+
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    </style>
+ </head>
+ <body>
+    <div class="row">
+        <div class="column" style="background-color:white;">
+            <img src="images/jwh.png" alt="John Hardie" width="250" height="200">
+            <p>John Hardie</p>
+        </div>
+        <div class="column" style="background-color:white;">
+            <h2>Born in Govan </h2>
+            <p>Born to Paint</p>
+        </div>
+    </div>
+ </body>
+</html>
