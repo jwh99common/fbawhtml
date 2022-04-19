@@ -1,16 +1,17 @@
 <html>
   
-  <head>
-<link rel="stylesheet" href="mystyle.css">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 </head>
-	
-<ul>
-  <li><a href="default.asp">Home</a></li>
-  <li><a href="gallery.html">Gallery</a></li>
-  <li><a href="contact.html">Contact</a></li>
-  <li><a href="about.html">About</a></li>
-</ul>
+<body>
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
   
-  <h1>Gallery</h1>
+<h1>Gallery</h1>
 </p>Gallery</p>
+</body>
 </html>
