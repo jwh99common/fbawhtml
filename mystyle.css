@@ -78,7 +78,8 @@ div.gallery:hover {
 div.gallery img {
   width: 100%;
   height: auto;
-  float: center;
+  float: left;
+  align: center
 }
 
 div.desc {
