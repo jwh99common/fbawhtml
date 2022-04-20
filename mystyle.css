@@ -46,7 +46,7 @@ table, td {
  }
 
 .column {
-    float: left;
+    float: center;
     width:33.33%;
 }
 
