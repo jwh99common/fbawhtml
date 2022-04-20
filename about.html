@@ -1,10 +1,9 @@
 <html>
-
 	
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 </head>
-<body>
+
     <div id="nav-placeholder"></div>
     <script>
         $.get("navigation.html", function(data){
@@ -12,33 +11,20 @@
         });
     </script> 
   
-<style>
-    {
-        box-sizing: border-box;
-    }
-    /* Set additional styling options for the columns*/
-    .column {
-    float: left;
-    width: 50%;
-    }
+<div class="header">
+  <p>Welcome to Food Bank ArtWork Gallery</p>
+</div>
+	
 
-    .row:after {
-    content: "";
-    display: table;
-    clear: both;
-    }
-    </style>
- </head>
- <body>
-    <div class="row">
-        <div class="column" style="background-color:white;">
-            <img src="images/jwh.png" alt="John Hardie" width="250" height="200">
-            <p>John Hardie</p>
-        </div>
-        <div class="column" style="background-color:white;">
-            <h2>Born in Glasgow </h2>
-            <p>Born to Paint</p>
-        </div>
+<div class="row">
+  <div class="column" style="background-color:white;">
+    <img src="images/jwh.png" alt="John Hardie" width="250" height="200">
+    <p>John Hardie</p>
     </div>
- </body>
+  <div class="column" style="background-color:white;">
+    <h2>Born in Glasgow </h2>
+    <p>Born to Paint</p>
+  </div>
+</div>
+
 </html>
