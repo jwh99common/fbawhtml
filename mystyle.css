@@ -54,9 +54,10 @@ table, td {
 
 /* Create three equal columns that floats next to each other */
 .column {
-  float: center;
+  float: left;
   width: 33.33%;
   padding: 10px;
+  text-align: center;
 }
 
 .row:after {
