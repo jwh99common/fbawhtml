@@ -3,20 +3,8 @@
 <head>
   <link rel="stylesheet" href="mystyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-  <script type = "text/javascript">  
-	function myfunction() { 
-	let d = new Date();
-	alert("how are you" + d);  
-         }  
-   </script>  
-	
-  <script type ="text/javascript">
-	function todaysdate () 	{	      
-        let d = new Date();
-        alert("Today's date is " + d);
-    </script>
+  
 </head>
-
     <div id="nav-placeholder"></div>
     <script>
         $.get("navigation.html", function(data){
@@ -27,7 +15,13 @@
 <div class="header">
   <p>Workers Page</p>
 </div>
-	
+	<a href="javascript:add(1,2)" id="fo">JS Add Numbers</a>
+
+	<script>
+		function add(a,b){
+			alert(a+b);
+		}
+   </script>
 <input type = "button" onclick = "todaysdate()" value = "Display">  
  
 
