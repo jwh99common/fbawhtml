@@ -27,12 +27,7 @@ li a {
 li a:hover {
   background-color: #111;
 }
-
-li:last-child
-{
-    float:right;
-}
-  
+ 
 .header {
   padding: 20px;
   text-align: center;
