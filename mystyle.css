@@ -1,7 +1,7 @@
 body {
   font-family: Arial;
   margin: 0;
-  background: #ADD8E6;
+  background:#0000CD;
 }
 
 ul {
@@ -31,7 +31,7 @@ li a:hover {
 .header {
   padding: 20px;
   text-align: center;
-  background: #ADD8E6;
+  background:#0000CD;
   color: white;
   font-size: 30px;
 }
@@ -95,7 +95,7 @@ div.desc {
    bottom: 0;
    width: 100%;
    text-align: center;
-  background:#ADD8E6;
+  background: #0000CD;
   color: white;
   font-size: 12px;
 }
