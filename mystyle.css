@@ -31,7 +31,7 @@ li a:hover {
 .header {
   padding: 20px;
   text-align: center;
-  background: #1abc9c;
+  background: #ADD8E6;
   color: white;
   font-size: 30px;
 }
@@ -95,7 +95,7 @@ div.desc {
    bottom: 0;
    width: 100%;
    text-align: center;
-  background: #1abc9c;
+  background:#ADD8E6;
   color: white;
   font-size: 12px;
 }
