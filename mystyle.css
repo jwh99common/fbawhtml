@@ -71,7 +71,7 @@ table, td {
 div.gallery {
   margin: 5px;
   border: 2px solid #ccc;
-  float: center;
+  float: left;
   width: 140px;
  }
 
