@@ -73,6 +73,7 @@ div.gallery {
   border: 2px solid #ccc;
   float: left;
   width: 140px;
+  text-align: center;
 }
 
 div.gallery:hover {
@@ -84,7 +85,7 @@ div.gallery img {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  text-align: center;
+  
 
 }
 
