@@ -23,10 +23,13 @@
 <script>
 aysnc function Xheader () {
 	alert ("hh");
-const response = await fetch("https://noisy-wind-7222.john-hardie.workers.dev");
+const response = await fetch('https://noisy-wind-7222.john-hardie.workers.dev');
 alert ("header 1");
 	// waits until the request completes...
-  alert (response);
+	alert (response);
+  return await response.json;
+	
+	
 }
 Xheader ();
 	
