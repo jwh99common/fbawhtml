@@ -32,6 +32,8 @@ function td () {
   {
     var parameters = location.search.substring(1).split("&");
 
+	  alert ("hello ");
+	  
     var temp = parameters[0].split("=");
     l = unescape(temp[1]);
     temp = parameters[1].split("=");
@@ -48,13 +50,10 @@ function td () {
 <a href="javascript:td()" id="fo">AD TD a</a>
 <br>
 	
-<a href="javascript:td()" id="f1">AD TD b</a>
-<br>
-
 <a href="javascript:add(1,2)" id="f2">AD TD c</a>
 <br>
 
-<a href="javascript:processUser()" id="f9">AD TD 9</a>
+<a href="javascript:processUser()" id="f3">AD TD 3</a>
 <br>
 	
 <a href="https://solitary-scene-ed40.john-hardie.workers.dev" id="f3">AD TD d</a>
