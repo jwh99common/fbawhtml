@@ -21,14 +21,15 @@
 
 
 <script>
- aysnc function Xheader () {
+aysnc function Xheader () {
 	alert ("hh");
 const response = await fetch("https://noisy-wind-7222.john-hardie.workers.dev");
 alert ("header 1");
 	// waits until the request completes...
   alert (response);
 }
-
+Xheader ();
+	
 function add(a,b){
   alert(a+b);
 }
