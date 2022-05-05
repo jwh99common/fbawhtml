@@ -6,13 +6,7 @@
 </head>
 	
 
-<script> 
-	function Xheader () {
-	const response = await fetch('https://noisy-wind-7222.john-hardie.workers.dev/');
-	alert ('header 1');
-	}
-	alert ('header 2');
-</script>
+
 	
     <div id="nav-placeholder"></div>
     <script>
@@ -27,6 +21,11 @@
 
 
 <script>
+function Xheader () {
+const response = await fetch('https://noisy-wind-7222.john-hardie.workers.dev/');
+alert ("header 1");
+}
+
   function add(a,b){
   alert(a+b);
 }
@@ -53,10 +52,7 @@ function td () {
     document.getElementById("pass").innerHTML = p;
   }
 	
-</script>
-<script>
-
-	function addComment()
+function addComment()
 	{
 		var parameters = location.search.substring(1).split("&");
 
