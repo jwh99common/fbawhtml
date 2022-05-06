@@ -1,3 +1,3 @@
 function changecss () {
-  document.getElementByClassName('header').style.fontSize='35px';
+  document.getElementById('header').style.fontSize='35px';
 }
