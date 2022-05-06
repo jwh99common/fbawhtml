@@ -3,7 +3,8 @@
 <head>
   <link rel="stylesheet" href="mystyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-	
+</head>
+
 <style>
 :root {
   --blue: #1e90ff;
@@ -52,11 +53,8 @@ function myFunction_set() {
 </script>
 	
 	
-</head>
 	
-	
-<body>
-    <div id="nav-placeholder"></div>
+<div id="nav-placeholder"></div>
     <script>
         $.get("navigation.html", function(data){
             $("#nav-placeholder").replaceWith(data);
@@ -82,6 +80,4 @@ function myFunction_set() {
 <button type="button" onclick="myFunction_get()">Get CSS Variable with JavaScript</button>
 <button type="button" onclick="myFunction_set()">Change CSS Variable with JavaScript</button>
 
-</body>
-</html>
 </html>
