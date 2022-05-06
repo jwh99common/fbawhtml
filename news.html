@@ -3,23 +3,11 @@
 <head>
   <link rel="stylesheet" href="mystyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-</head>
-
-    <div id="nav-placeholder"></div>
-    <script>
-        $.get("navigation.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-    </script> 
-  
-<div class="header">
-  <p>News Page</p>
-</div>
-	
 	
 <style>
 :root {
   --blue: #1e90ff;
+  --red: #FF0000;
   --white: #ffffff; 
 }
 
@@ -60,12 +48,24 @@ function myFunction_get() {
 // Create a function for setting a variable value
 function myFunction_set() {
   // Set the value of variable --blue to another value (in this case "lightblue")
-  r.style.setProperty('--blue', 'lightblue');
-}
+  r.style.setProperty('--blue', '--red');
 </script>
+	
+	
 </head>
+	
+	
 <body>
-
+    <div id="nav-placeholder"></div>
+    <script>
+        $.get("navigation.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+    </script> 
+  
+<div class="header">
+  <p>News Page</p>
+</div>
 <h1>Get and Change CSS Variable With JavaScript</h1>
 
 <div class="container">
@@ -83,4 +83,5 @@ function myFunction_set() {
 <button type="button" onclick="myFunction_set()">Change CSS Variable with JavaScript</button>
 
 </body>
+</html>
 </html>
