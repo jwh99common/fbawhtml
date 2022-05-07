@@ -1,5 +1,8 @@
 function changecss () {
-  alert ('changecss');
+  alert ('changecss: entry');
 
-  // document.getElementById('header').style.fontSize='35px';
+  document.getElementByClassNAme('header').style.fontSize='35px';
+
+  alert ('changecss: exit');
+
 }
