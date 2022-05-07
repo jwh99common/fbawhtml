@@ -11,7 +11,12 @@
         $.get("navigation.html", function(data){
             $("#nav-placeholder").replaceWith(data);
         });
-</script> 
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+	
 
 </head>
 	
@@ -59,10 +64,14 @@
 
 	<script>
 		alert ("a");
-		changecss ();
+		myfunction ();
 		alert ("b");
 	</script>
  
+
+<p id="demo">A Paragraph.</p>
+	
+	
 <div id="demo">
   CSS Page
 </div>
