@@ -3,19 +3,20 @@
 <head>
   <link rel="stylesheet" href="mystyle.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-  
- <div id="nav-placeholder"></div>
-  <script>
+</head>
+
+
+
+	
+<div id="nav-placeholder"></div>
+    <script>
         $.get("navigation.html", function(data){
             $("#nav-placeholder").replaceWith(data);
         });
+    </script> 
+  
+<div class="header">
+  <p>News Page</p>
+</div>
 
-</head>
-	
-<body>	
-<p>A Paragraph.</p>
-<p>CSS Page</p>
-</body>
-	
-	
 </html>
