@@ -2,7 +2,7 @@ function changecss () {
   alert ('changecss: entry');
 
   document.getElementById('header').style.fontSize='100px';
-  document.getElementById('header').style.textAlign ="center";
+  document.getElementById('header').style.textAlign ="left";
   
   alert ('changecss: middle');
   
