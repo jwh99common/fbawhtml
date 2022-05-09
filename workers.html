@@ -27,15 +27,12 @@ alert ("a");
 	
 
 <script>
+alert ("b")
 	
 var http = new XMLHttpRequest();
 var url = "https://white-heart-2c18.john-hardie.workers.dev";
-var return = http.open('FETCH', url, true);
-alert ("b");
-	
-</script>
-
-<script>
+var return = http.open('FETCH', url);
+alert ("c");
 alert (return);
 </script>
 
