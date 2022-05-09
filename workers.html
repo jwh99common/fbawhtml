@@ -19,12 +19,16 @@
   <p>Workers Page</p>
 </div>
 
+<p id="demo">Click me.</p>
+
 <script>
-	alert ("a");
-	let v = myfunction (10,2);
-	alert ("b");
-	
+document.getElementById("demo").addEventListener("click", myFunction);
+
+function myFunction() {
+  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+}
 </script>
+
 
 <iframe src="https://solitary-scene-ed40.john-hardie.workers.dev" title="workers 1"></iframe>
 
