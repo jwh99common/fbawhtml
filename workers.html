@@ -21,13 +21,6 @@
 
 <p id="demo">Click me.</p>
 
-<script>
-document.getElementById("demo").addEventListener("click", myFunctionX);
-
-function myFunction() {
-  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-}
-</script>
 
 
 <iframe src="https://solitary-scene-ed40.john-hardie.workers.dev" title="workers 1"></iframe>
@@ -41,43 +34,13 @@ function myFunction() {
 <script>
 
 alert ("a");
-	
+
+var http = new XMLHttpRequest();
 var url = "https://white-heart-2c18.john-hardie.workers.dev";
+var return = http.open('POST', url, true);
 
-alert (url);
-	
-var xhr = new XMLHttpRequest();
-alert ("c");
+alert (return);
 
-xhr.open("POST", url);
-alert ("d");
-
-xhr.setRequestHeader("Authorization", "Bearer mt0dgHmLJMVQhvjpNXDyA83vA_PxH23Y");
-alert ("e");
-
-xhr.setRequestHeader("Content-Type", "application/json");
-alert ("f");
-
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
-      console.log(xhr.status);
-      console.log(xhr.responseText);
-   }};
-
-alert ("g");
-
-var data = `{
-  "Id": 12345,
-  "Customer": "John Smith",
-  "Quantity": 1,
-  "Price": 10.00
-}`;
-
-alert ("h");
-
-xhr.send(data);
-
-alert ("x");
 </script>
 	
 	
