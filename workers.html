@@ -39,20 +39,31 @@ function myFunction() {
 <iframe src="https://noisy-wind-7222.john-hardie.workers.dev" title="workers 4" width="25%" height=auto></iframe>
 
 <script>
+
+alert ("a");
 	
 var url = "https://reqbin.com/echo/post/json";
+alert ("b");
 
 var xhr = new XMLHttpRequest();
+alert ("c");
+
 xhr.open("POST", url);
+alert ("d");
 
 xhr.setRequestHeader("Authorization", "Bearer mt0dgHmLJMVQhvjpNXDyA83vA_PxH23Y");
+alert ("e");
+
 xhr.setRequestHeader("Content-Type", "application/json");
+alert ("f");
 
 xhr.onreadystatechange = function () {
    if (xhr.readyState === 4) {
       console.log(xhr.status);
       console.log(xhr.responseText);
    }};
+
+alert ("g");
 
 var data = `{
   "Id": 12345,
@@ -61,9 +72,11 @@ var data = `{
   "Price": 10.00
 }`;
 
+alert ("h");
+
 xhr.send(data);
 
-	
+alert ("x");
 </script>
 	
 	
