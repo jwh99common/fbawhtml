@@ -40,19 +40,29 @@ function myFunction() {
 
 <script>
 	
-alert ("a");
-	
-var url = "https://white-heart-2c18.john-hardie.workers.dev";
-alert ("b");
+var url = "https://reqbin.com/echo/post/json";
 
 var xhr = new XMLHttpRequest();
-alert ("c");
-
 xhr.open("POST", url);
-alert ("d");
 
-xhr.send();
-alert ("e");
+xhr.setRequestHeader("Authorization", "Bearer mt0dgHmLJMVQhvjpNXDyA83vA_PxH23Y");
+xhr.setRequestHeader("Content-Type", "application/json");
+
+xhr.onreadystatechange = function () {
+   if (xhr.readyState === 4) {
+      console.log(xhr.status);
+      console.log(xhr.responseText);
+   }};
+
+var data = `{
+  "Id": 12345,
+  "Customer": "John Smith",
+  "Quantity": 1,
+  "Price": 10.00
+}`;
+
+xhr.send(data);
+
 	
 </script>
 	
