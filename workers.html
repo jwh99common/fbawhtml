@@ -7,13 +7,21 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
 <script>
-	
+
+async function test () {
 alert ("aaaa115");
-const resp = fetch ('https://falling-sea-d98a.john-hardie.workers.dev/');
+const resp =await  fetch ('https://falling-sea-d98a.john-hardie.workers.dev');
 const r = await response.json();
 alert (r);
 alert ("bbbb226");
+}
 
+
+alert ('z1');
+	
+	test ();
+alert ('z2');
+	
 </script>
 
 </head>
