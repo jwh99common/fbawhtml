@@ -8,20 +8,19 @@
 
 <script>
 
-async function test () {
-alert ("aaaa115");
-const resp =await  fetch ('https://falling-sea-d98a.john-hardie.workers.dev');
-const r = await response.json();
-alert (r);
-alert ("bbbb226");
-}
-
 
 alert ('z1');
 	
-	test ();
+fetch('https://falling-sea-d98a.john-hardie.workers.dev')
+  .then(response => response.text())
+  .then(data => console.log(data));
+
 alert ('z2');
+
+alert (data);
 	
+alert ('z2');
+
 </script>
 
 </head>
@@ -40,7 +39,6 @@ alert ('z2');
 <div class="header">
   <p>Workers Page 1</p>
 </div>
-
 
 <iframe src="https://solitary-scene-ed40.john-hardie.workers.dev" title="workers 1"></iframe>
 
