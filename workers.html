@@ -13,13 +13,13 @@
 	
 
 
-fetch('https://jwh-r2worker-0083.john-hardie.workers.dev')
+let t = await fetch('https://jwh-r2worker-0083.john-hardie.workers.dev')
   .then(response => response.text())
   .then(data => console.log(data));
 	
 
 
-alert (response.text());
+alert (t);
 	
 
 
