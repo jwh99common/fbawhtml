@@ -9,19 +9,11 @@
 <script>
 
 
-
 	
+let response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev');
+let data = await response.text();
 
-
-let t = await fetch('https://jwh-r2worker-0083.john-hardie.workers.dev')
-  .then(response => response.text())
-  .then(data => console.log(data));
-	
-
-
-alert (t);
-	
-
+alert (data)';
 
 </script>
 
