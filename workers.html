@@ -11,9 +11,12 @@
 	
 <body> 
 <script>
-const response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev/')
-const text = await response.text()
-alert (text);
+(async () => {
+  const response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev/')
+  const text = await response.text()
+  alert(text)
+})()
+	
 </script>
 	
     <div id="nav-placeholder"></div>
