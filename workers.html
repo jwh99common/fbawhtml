@@ -13,12 +13,12 @@
 let var text = "ABC";
 	
 (async () => {
-  alert ("a");
+  alert (text);
   const response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev/');
-  alert ("b");
+  alert (text);
   const text = await response.text();
   alert (text);
-  await sleep(3000);
+
 	
 })()
 	
