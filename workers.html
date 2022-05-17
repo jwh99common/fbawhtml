@@ -7,6 +7,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
 <script>
+	alert ('a');
 async function getText ()  {
 	const response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev');
   	const text = await response.text();
@@ -19,9 +20,9 @@ async function getText ()  {
 <body>
 	
 <script>
-	alert ("a");
+	alert ("b");
 	getText()";
-	alert ("B");
+	alert ("c");
 </script>
 	
     <div id="nav-placeholder"></div>
