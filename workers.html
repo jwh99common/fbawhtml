@@ -7,14 +7,13 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 
 <script>
-<body onload "(async () => {
-	const response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev/');
-  const text = await response.text();
-  alert(text);
+async function getText () => {
+	const response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev');
+  	const text = await response.text();
+ 	alert(text);
 }
-)()">
 
-
+<body onload="getText ()">
 </script>
 </head>
 	
