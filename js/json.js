@@ -1,5 +1,5 @@
 // api url
-const api_url = "test.json";
+const api_url = "json/employees.json";
 
 // Defining async function
 async function getapi(url) {
