@@ -43,7 +43,7 @@ function show(data) {
 }
 
 
-function updateJson (data) {
+function updateJson () {
 	const fs = require("fs");
 	fs.readFile(api_url, "utf8", (err, jsonString) => {
   	if (err) {
