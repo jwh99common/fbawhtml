@@ -43,3 +43,7 @@ function show(data) {
 	
 }
 
+function updateJson () {
+	var fs = require("fs");
+	console.log(" Writing into an file ");
+}
