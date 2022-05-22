@@ -43,3 +43,7 @@ function show(data) {
 	
 }
 
+function updateJson () {
+const fs = require("fs");
+console.log ('s');
+}
