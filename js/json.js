@@ -44,6 +44,15 @@ function show(data) {
 }
 
 function updateJson () {
-	var fs = require("fs");
-	console.log(" Writing into an file ");
+const data = {
+	"age": 83,
+	"name": "Mini Corp."
+	}
+	
+	
+    fs.writeFile (api_url, JSON.stringify(data), function(err) {
+    if (err) throw err;
+    console.log('complete');
+    }
+);
 }
