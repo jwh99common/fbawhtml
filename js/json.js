@@ -41,3 +41,16 @@ function show(data) {
 	document.getElementById("employees").innerHTML = tab;
 	
 }
+
+
+function updateJson (data) {
+	const fs = require("fs");
+	fs.readFile(api_url, "utf8", (err, jsonString) => {
+  	if (err) {
+    		console.log("File read failed:", err);
+   	 return;
+  	}
+  	console.log("File data:", jsonString);
+});
+	
+}
