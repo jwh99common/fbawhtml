@@ -29,8 +29,6 @@ function show(data) {
         `<tr>
           <th>Name</th>
           <th>Office</th>
-          <th>Position</th>
-          <th>Salary</th>
          </tr>`;
 	
 	for(var i = 0; i < data.length; i++) {
