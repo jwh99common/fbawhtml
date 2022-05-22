@@ -44,7 +44,7 @@ function show(data) {
 
 
 function updateJson () {
-	const fs = require("fs");
+	const fs = require(api_url);
 	fs.readFile(api_url, "utf8", (err, jsonString) => {
   	if (err) {
     		console.log("File read failed:", err);
