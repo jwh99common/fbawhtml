@@ -57,9 +57,9 @@ function updateJson () {
    		console.log("Error writing file" ,err)
 	 } else {
    		console.log('JSON data is written to the file successfully')
- 	}
+ 		}
+	}
 }
-	
 
 
 
