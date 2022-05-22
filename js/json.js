@@ -42,7 +42,20 @@ function show(data) {
 	
 }
 
-
-
-
-
+function updateJson () {
+const client = {
+"age": 83,
+"name": "Mini Corp."
+}
+	console.log ('a');
+	const data = JSON.stringify(client);
+	console.log ('b');
+	fileSystem.writeFile(api_url, data, err=>{
+ 		if(err) 		{
+   			console.log("Error writing file" ,err);
+	 	} else {
+   			console.log('JSON data is written to the file successfully');
+	 	}
+	}
+	console.log ('c');
+}
