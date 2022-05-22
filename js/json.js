@@ -42,24 +42,7 @@ function show(data) {
 	
 }
 
-function updateJson () {
-	// const fileSystem = require("browserify-fs")
 
-	const client = {
-	"age": 83,
-	"name": "Mini Corp."
-	}
-
-	const data = JSON.stringify(client)
-
-	fileSystem.writeFile(api_url, data, err=>{
- 	if(err){
-   		console.log("Error writing file" ,err)
-	 } else {
-   		console.log('JSON data is written to the file successfully')
- 		}
-	}
-}
 
 
 
