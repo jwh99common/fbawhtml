@@ -25,22 +25,9 @@
 	<table id="employees"></table>
 
 	
-<script type ="text/javascript">
- function WriteToFile() {
 
-    set fso = CreateObject("Scripting.FileSystemObject");  
-    set s = fso.CreateTextFile("json/text.txt", True);
-    s.writeline('hello');
-    s.writeline('world');
-    s.writeline('------');
-    s.Close();
- }
 	
-WriteToFile ();
-	
-</script>
-	
-<button type="button" onclick="WriteToFile()">Update Json File and then reload the page</button>
+<button type="button" onclick="updateJson()">Update Json File and then reload the page</button>
 
 </body>
 </html>
