@@ -19,6 +19,7 @@ async function getapi(url) {
 // Calling that async function
 
 console.log (api_url);
+
 getapi(api_url);
 
 
@@ -43,10 +44,10 @@ function show(data) {
 }
 
 function updateJson () {
-const client = {
+const client =[ {
 "age": 83,
 "name": "Mini Corp."
-}
+}]
 	console.log ('a');
 	const data = JSON.stringify(client);
 	console.log ('b');
