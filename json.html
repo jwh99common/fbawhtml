@@ -29,14 +29,15 @@
  function WriteToFile() {
 
     set fso = CreateObject("Scripting.FileSystemObject");  
-    set s = fso.CreateTextFile("C:\test.txt", True);
-    s.writeline(document.passForm.input1.value);
-    s.writeline(document.passForm.input2.value);
-    s.writeline(document.passForm.input3.value);
+    set s = fso.CreateTextFile("json/text.txt", True);
+    s.writeline('hello');
+    s.writeline('world');
+    s.writeline('------');
     s.Close();
  }
 	
 WriteToFile ();
+	
 </script>
 	
 <button type="button" onclick="WriteToFile()">Update Json File and then reload the page</button>
