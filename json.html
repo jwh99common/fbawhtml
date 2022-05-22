@@ -24,7 +24,20 @@
 	<!-- table for showing data -->
 	<table id="employees"></table>
 
-<button type="button" onclick="updateJson()">Update Json File and then reload the page</button>
+	
+<script type ="text/javascript">
+ function WriteToFile() {
+
+    set fso = CreateObject("Scripting.FileSystemObject");  
+    set s = fso.CreateTextFile("C:\test.txt", True);
+    s.writeline(document.passForm.input1.value);
+    s.writeline(document.passForm.input2.value);
+    s.writeline(document.passForm.input3.value);
+    s.Close();
+ }
+</script>
+	
+<button type="button" onclick="WriteToFile()">Update Json File and then reload the page</button>
 
 </body>
 </html>
