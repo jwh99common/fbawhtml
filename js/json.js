@@ -48,11 +48,19 @@ const data = {
 	"age": 83,
 	"name": "Mini Corp."
 	}
+
+
+	set fso = CreateObject("Scripting.FileSystemObject"); 
+    	set s   = fso.CreateTextFile("json/filename.txt", True);	
+
 	
-	
-    fs.writeFile (api_url, JSON.stringify(data), function(err) {
-    if (err) throw err;
-    console.log('complete');
-    }
-);
+	var firstName = document.getElementById('FirstName');
+    	var lastName  = document.getElementById('lastName');
+ 
+    	s.writeline("First Name :" + FirstName);
+    	s.writeline("Last Name :" + lastName);
+ 
+    	s.writeline("-----------------------------");
+    	s.Close();
+  
 }
