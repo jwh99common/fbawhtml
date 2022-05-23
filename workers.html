@@ -11,7 +11,7 @@
 	
 (async () => {
   const response = await fetch('https://white-heart-2c18.john-hardie.workers.dev');
-  text = await response.text();
+  text = await response.html();
   console.log (text);
 	
 })()
