@@ -11,7 +11,7 @@
 	
 (async () => {
   const response = await fetch('https://falling-sea-d98a.john-hardie.workers.dev');
-  text = await response.html();
+  text = await response.text();
   console.log (text);
 	
 })()
