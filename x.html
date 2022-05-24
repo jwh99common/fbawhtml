@@ -9,43 +9,38 @@
 </head>
 
 <body>
-
-
-</script>		
-$(document).ready(function () {
-
-        $('.menu').click(function() {
-            $('.overlay').toggleClass('anim');
-            $(this).addClass('open')
-        });
-
-        $('.open').click(function(){
-            $('.overlay').toggleClass('reverse-animation');
-        })
-});
-</script> 
-
- <div class="wrapper">
-    <span class="menu"></span>
-
-    <div class="title">
-        <h1>Click the burger icon to see the menu !</h1>
-    </div>
-
-    <div class="overlay">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Works</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </div>
+	
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
 </div>
+
+<!-- Use any element to open the sidenav -->
+<span onclick="openNav()">open</span>
+
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
 
 <div class="header">
-  <p>Workers Page</p>
+<p>Workers Page</p>
 </div>
 
+</div>
+
+
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
 
 	
 <body>
