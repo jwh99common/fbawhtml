@@ -14,7 +14,7 @@
 
   const response = await fetch('/functions/hw.js');
   var text = await response.text();
-  console.log ('a' + text);
+  console.log ('a   :   ' + text);
 
 })();
 
@@ -23,49 +23,39 @@
 	
   const response = await fetch('/functions/hw');
   var text = await response.text();
-  console.log ('b');
-  console.log (text);
+  console.log ('b   :  ' + text);
 
 })();
-/*
+
 
 (async () => {
-  console.log ('c');
 	
   const response = await fetch('functions/hw');
   var text = await response.text();
-  console.log (text);
-
+  console.log ('c   :  ' + text);
 })()	;
 	
 (async () => {
-  console.log ('d');
 	
   const response = await fetch('/hw');
   var text = await response.text();
-  console.log (text);
-
+  console.log ('d   :  ' + text);
 })()	;	
 
 (async () => {
-  console.log ('e');
 	
   const response = await fetch('hw');
   var text = await response.text();
-  console.log (text);
-
+ console.log ('e   :  ' + text);
 })()		;
 	
 (async () => {
-  console.log ('f');
-	
+ 	
   const response = await fetch('hw.js');
   var text = await response.text();
-  console.log (text);
-
+  console.log ('f   :  ' + text);
 })()	;
 
-*/
 
 /*
 console.log ('a');
