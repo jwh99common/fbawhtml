@@ -11,26 +11,24 @@
 <script>
 
 (async () => {
-  console.log ('a');
-	
+
   const response = await fetch('/functions/hw.js');
   var text = await response.text();
-  console.log (text);
+  console.log ('a' + text);
 
 })();
-
-/*
 
 
 (async () => {
-  console.log ('b');
 	
   const response = await fetch('/functions/hw');
   var text = await response.text();
+  console.log ('b');
   console.log (text);
 
 })();
-	
+/*
+
 (async () => {
   console.log ('c');
 	
