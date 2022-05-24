@@ -42,8 +42,3 @@ function show(data) {
 	document.getElementById("employees").innerHTML = tab;
 	
 }
-
-function updateJson () {
-const fs = require("fs");
-console.log ('s');
-}
