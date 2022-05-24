@@ -12,8 +12,10 @@
 	
 
 (async () => {
-  const response = await fetch('functions/hw');
-  text = await response.text();
+  console.log ('a');
+	
+  const response = await fetch('hw.js');
+  const text = await response.text();
   console.log (text);
 })()
 
