@@ -1,0 +1,54 @@
+<html>
+<head>
+	
+	
+  <link rel="stylesheet" href="x.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  
+  <div class="wrapper">
+    <span class="menu"></span>
+
+    <div class="title">
+        <h1>Click the burger icon to see the menu !</h1>
+    </div>
+
+    <div class="overlay">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Works</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+</div>
+  
+</head>
+
+<body>
+
+
+</script>		
+$(document).ready(function () {
+
+        $('.menu').click(function() {
+            $('.overlay').toggleClass('anim');
+            $(this).addClass('open')
+        });
+
+        $('.open').click(function(){
+            $('.overlay').toggleClass('reverse-animation');
+        })
+});
+    </script> 
+	
+
+<div class="header">
+  <p>Workers Page</p>
+</div>
+
+
+	
+<body>
+</html>
