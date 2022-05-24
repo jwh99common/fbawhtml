@@ -16,7 +16,7 @@
   const response = await fetch('functions/hw.js');
   const text = await response.text();
   console.log (text);
-  document.getElementById("body").innerHTML = text;
+  document.body.innerHTML = text;
 
 })()
 
