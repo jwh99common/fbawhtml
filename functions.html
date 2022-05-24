@@ -16,7 +16,7 @@
   const response = await fetch('functions/hw.js');
   const text = await response.text();
   console.log (text);
-  document.body.innerHTML = text;
+  document.getElementById("functions").innerHTML = text;
 
 })()
 
@@ -41,6 +41,9 @@ console.log (text);
   <p>Functions Page</p>
 </div>
 
+	<div class "functions">
+		<p>body text</p>
+	</div>
 	
 	
 <body>
