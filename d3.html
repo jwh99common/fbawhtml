@@ -1,12 +1,15 @@
 <html>
 	
 <head>
-  
   <link rel="stylesheet" href="mystyle.css">
   <link rel="stylesheet" href="news.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  
+
+<script>
+	import {values} from "@d3/learn-d3-by-example"
+	import {Histogram} from "@d3/histogram"
+</script>  
 
 <div id="nav-placeholder"></div>
 <script>
@@ -28,8 +31,7 @@ d3.selectAll("p").style("color", "blue");
 d3.select("body").transition()
     .style("background-color", "black");
 	
-import {values} from "@d3/learn-d3-by-example"
-import {Histogram} from "@d3/histogram"
+
 Histogram(values)
 </script>
 
