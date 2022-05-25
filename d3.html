@@ -25,7 +25,13 @@
 
 <script>
 d3.selectAll("p").style("color", "blue");
-	</script>
+d3.select("body").transition()
+    .style("background-color", "black");
+	
+import {values} from "@d3/learn-d3-by-example"
+import {Histogram} from "@d3/histogram"
+Histogram(values)
+</script>
 
 </body>
 </html>
