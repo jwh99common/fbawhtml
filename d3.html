@@ -16,11 +16,7 @@
 
 
 <div id="nav-placeholder"></div>
-<script>
-        $.get("navigation.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-</script> 
+
 </head>
 
 <body>
@@ -57,9 +53,12 @@ console.log ('b');
   var x = d3.scaleLinear()
       .domain([0, 1000])     // can use this instead of 1000 to have the max of data: d3.max(data, function(d) { return +d.price })
       .range([0, width]);
+	
+console.log ('c');
   svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
+console.log ('d');
 
   // set the parameters for the histogram
   var histogram = d3.histogram()
@@ -67,8 +66,12 @@ console.log ('b');
       .domain(x.domain())  // then the domain of the graphic
       .thresholds(x.ticks(70)); // then the numbers of bins
 
+console.log ('e');
+
   // And apply this function to data to get the bins
   var bins = histogram(data);
+
+console.log ('f');
 
   // Y axis: scale and draw:
   var y = d3.scaleLinear()
