@@ -118,7 +118,14 @@ div.desc {
   text-align: center;
   background:#FFFFFF;
   color: black;
-    font-size: 100px;
+    font-size: 50px;
+}
+#header2  {
+  padding: 20px;
+  text-align: center;
+  background:#FFFFFF;
+  color: black;
+    font-size: 50px;
 }
 
 
