@@ -3,19 +3,21 @@
 <head>
   <link rel="stylesheet" href="mystyle.css">
   <link rel="stylesheet" href="news.css">
-  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
   <script src="./script.js"></script>
 	
 	
   <div id="nav-placeholder"></div>
   
-  <script>
+<script>
   $.get("navigation.html", function(data){
   	$("#nav-placeholder").replaceWith(data);
   });
-  </script> 
+</script> 
 
+<canvas id="myChart" width="900" height="900"></canvas>  
+
+	
 <style>
 	
 body {
@@ -58,7 +60,7 @@ a {
 </div>
 
 	
-<canvas id="myChart" width="900" height="900"></canvas>
+
 	
 
 	
