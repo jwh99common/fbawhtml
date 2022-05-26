@@ -117,16 +117,38 @@ a {
   };
 
   const config = {
-    type: 'radar',
+    type: 'pie',
     data: data,
     options: {}
   };
 
-const myChart = new Chart(
+ctx = document.getElementById('myChart').getContext('2d');
+chart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        datasets: [{
+            label: 'Colors',
+            data: [9, 8, 7, 6, 5, 4, 3, 2, 1],
+            backgroundColor: ["#0074D9", "#FF4136", "#2ECC40", "#FF851B", "#7FDBFF", "#B10DC9", "#FFDC00", "#001f3f", "#39CCCC", "#01FF70", "#85144b", "#F012BE", "#3D9970", "#111111", "#AAAAAA"]
+        }],
+        labels: ['a','b','c','d','e','f','g','h','i']
+    },
+    options: {
+        responsive: true,
+        title:{
+            display: true,
+            text: "Color test"
+        }
+    }
+});
+	
+/*const myChart = new Chart(
     document.getElementById('myChart'),
     config
   );	
-
+*/
+	
+	
 const labels2 = [
     'January',
     'February',
