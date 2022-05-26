@@ -87,9 +87,9 @@ a {
     
   </div>
   <div class="column" style="background-color:#bbb;">
-    <h2>Column 2</h2>
+    
 	   <canvas id="myChart2" ></canvas>
-    <p>Some text..</p>
+    
   </div>
 </div>
 	
@@ -122,6 +122,34 @@ a {
     options: {}
   };
 	
+	
+  const labels2 = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+	 'August'
+  ];
+
+  const dat2a = {
+    labels: labels,
+    datasets: [{
+      label: 'My First dataset',
+      backgroundColor: 'rgb(255, 99, 132)',
+      borderColor: 'rgb(255, 99, 132)',
+      data: [22, 10, 22, 12, 200, 30, 45],
+    }]
+  };
+
+  const config2 = {
+    type: 'line',
+    data: data2,
+    options: {}
+  };
+	
 const myChart = new Chart(
     document.getElementById('myChart'),
     config
@@ -129,7 +157,7 @@ const myChart = new Chart(
 	
 const myChart2 = new Chart(
     document.getElementById('myChart2'),
-    config
+    config2
   );		
 </script>
 	
