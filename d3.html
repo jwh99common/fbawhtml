@@ -109,7 +109,7 @@ a {
   const data = {
     labels: labels,
     datasets: [{
-      label: 'My First dataset',
+      label: 'Data #1',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
       data: [22, 10, 22, 12, 200, 30, 45],
@@ -121,9 +121,13 @@ a {
     data: data,
     options: {}
   };
-	
-	
-  const labels2 = [
+
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );	
+
+const labels2 = [
     'January',
     'February',
     'March',
@@ -131,16 +135,16 @@ a {
     'May',
     'June',
     'July',
-	 'August'
+    'August'
   ];
 
-  const dat2a = {
-    labels: labels,
+const data2 = {
+    labels: labels2,
     datasets: [{
-      label: 'My First dataset',
+      label: 'Data #2',
       backgroundColor: 'rgb(255, 99, 132)',
       borderColor: 'rgb(255, 99, 132)',
-      data: [22, 10, 22, 12, 200, 30, 45],
+      data: [50, 40, 27, 88, 19, 30, 45],
     }]
   };
 
@@ -150,15 +154,14 @@ a {
     options: {}
   };
 	
-const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );
+
 	
 const myChart2 = new Chart(
     document.getElementById('myChart2'),
     config2
-  );		
+  );
+	
+	
 </script>
 	
 
