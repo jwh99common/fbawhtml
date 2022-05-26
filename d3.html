@@ -71,7 +71,6 @@ a {
   float: left;
   width: 50%;
   padding: 10px;
-  height: 600px; /* Should be removed. Only for demonstration */
 }
 
 /* Clear floats after the columns */
@@ -83,12 +82,13 @@ a {
 </style>
 <div class="row">
   <div class="column" style="background-color:#aaa;">
-    <h2>Column 1</h2>
+    
 	  <canvas id="myChart" ></canvas>
-    <p>Some text..</p>
+    
   </div>
   <div class="column" style="background-color:#bbb;">
     <h2>Column 2</h2>
+	   <canvas id="myChart2" ></canvas>
     <p>Some text..</p>
   </div>
 </div>
@@ -125,8 +125,12 @@ a {
 const myChart = new Chart(
     document.getElementById('myChart'),
     config
-  );	
+  );
 	
+const myChart2 = new Chart(
+    document.getElementById('myChart2'),
+    config
+  );		
 </script>
 	
 
