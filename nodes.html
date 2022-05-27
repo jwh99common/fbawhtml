@@ -126,7 +126,8 @@
 	
 	
         const el = headers.reduce(function (object, header, index) {
-          object[header] = values[index];
+          console.log ('Header : ' + header);
+	  object[header] = values[index];
 	  return object;
         }, {});
 	return el;
