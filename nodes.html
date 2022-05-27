@@ -128,7 +128,7 @@
 	
 	const arr = rows.map(function (row) {
         const values = row.split(delimiter);
-	console.log ('values : ' + values');
+	console.log ('values : ' + values);
         const el = headers.reduce(function (object, header, index) {
           console.log ('element : ' + values[index]);
 	  object[header] = values[index];
