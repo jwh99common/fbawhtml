@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="news.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-    <script src="js/csv.js"></script> 
+    
             
             
             
@@ -94,12 +94,58 @@
   </div>
   <div class="column" style="background-color:#bbb;">
     
-	   <div class="container">
-	<div class=col-lg-12>
-    <div id="drop_zone" onclick="dropzoneClick()" accept=".csv" class="well"><center><h1><i class="fa-cloud-upload"></i> Drop Your file Here (or click)</h1></center></div>
-    <input type="file" name="file" id="file" class="hide"/>
-	</div>
-</div>
+	<form id="myForm">
+    	<input type="file" id="csvFile" accept=".csv" />
+    	<br />
+    	<input type="submit" value="Submit" />
+  	</form>
+	  
+  <script>
+    const myForm = document.getElementById("myForm");
+    const csvFile = document.getElementById("csvFile");
+
+    function csvToArray(str, delimiter = ",") {
+
+      // slice from start of text to the first \n index
+      // use split to create an array from string by delimiter
+      const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+
+      // slice from \n index + 1 to the end of the text
+      // use split to create an array of each csv value row
+      const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+
+      // Map the rows
+      // split values from each row into an array
+      // use headers.reduce to create an object
+      // object properties derived from headers:values
+      // the object passed as an element of the array
+      const arr = rows.map(function (row) {
+        const values = row.split(delimiter);
+        const el = headers.reduce(function (object, header, index) {
+          object[header] = values[index];
+          return object;
+        }, {});
+        return el;
+      });
+
+      // return the array
+      return arr;
+    }
+
+    myForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      const input = csvFile.files[0];
+      const reader = new FileReader();
+
+      reader.onload = function (e) {
+        const text = e.target.result;
+        const data = csvToArray(text);
+        document.write(JSON.stringify(data));
+      };
+      
+      reader.readAsText(input);
+    });
+  </script>
     
   </div>
 </div>  
@@ -109,6 +155,5 @@
 
 
     
-</body>
 </body>
 </html>
