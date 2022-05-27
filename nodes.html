@@ -107,17 +107,12 @@
 	// slice from start of text to the first \n index
       	// use split to create an array from string by delimiter
       	const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
-	console.log ('header :' + headers);
+	
 	
       	// slice from \n index + 1 to the end of the text
       	// use split to create an array of each csv value row
       	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
-	console.log ('All Rows :' + rows + rows.length);
-		
-	for(var i = 0; i < rows.length; i++) { 
-		console.log ('Each Row' + i + rows[i]);	
-		
-	}
+	
 
       	// Map the rows
       	// split values from each row into an array
@@ -128,20 +123,18 @@
 	
 	const arr = rows.map(function (row) {
         const values = row.split(delimiter);
-	console.log ('values : ' + values);
+	
 	
         const el = headers.reduce(function (object, header, index) {
           object[header] = values[index];
-	  console.log ('element : ' + index + header + object [header] + values[index]);
-          return object;
+	  return object;
         }, {});
 	return el;
       });
 
       // return the array
-	console.log ('arr:' + arr);
-		
-	for(var i = 0; i < arr.length; i++) {
+			
+      for(var i = 0; i < arr.length; i++) {
 		console.log ('array : ' + i + arr[i].Name + ' ' + arr[i].Role + ' ' + arr[i].Country);
 	}
       return arr;
