@@ -129,12 +129,13 @@
 	const arr = rows.map(function (row) {
         const values = row.split(delimiter);
 	console.log ('values : ' + values);
+	
         const el = headers.reduce(function (object, header, index) {
-          console.log ('element : ' + values[index]);
+          console.log ('element : ' index + values[index]);
 	  object[header] = values[index];
           return object;
         }, {});
-	console.log ('el:' + el);
+	console.log ('el:' + el.name[1]);
         return el;
       });
 
