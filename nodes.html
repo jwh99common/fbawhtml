@@ -94,7 +94,12 @@
   </div>
   <div class="column" style="background-color:#bbb;">
     
-	   <canvas id="myChart2" ></canvas>
+	   <div class="container">
+	<div class=col-lg-12>
+    <div id="drop_zone" onclick="dropzoneClick()" accept=".csv" class="well"><center><h1><i class="fa-cloud-upload"></i> Drop Your file Here (or click)</h1></center></div>
+    <input type="file" name="file" id="file" class="hide"/>
+	</div>
+</div>
     
   </div>
 </div>  
@@ -102,12 +107,7 @@
 
     
 
-<div class="container">
-	<div class=col-lg-12>
-    <div id="drop_zone" onclick="dropzoneClick()" accept=".csv" class="well"><center><h1><i class="fa-cloud-upload"></i> Drop Your file Here (or click)</h1></center></div>
-    <input type="file" name="file" id="file" class="hide"/>
-	</div>
-</div>
+
     
 </body>
 </body>
