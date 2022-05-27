@@ -4,7 +4,10 @@
     <link rel="stylesheet" href="news.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
-
+    <script src="js/csv.js"></script> 
+            
+            
+            
     <div id="nav-placeholder"></div>
     <script>
         $.get("navigation.html", function(data){
@@ -24,12 +27,32 @@
     
     
 <body>
-  <div id="header">
+<div id="header">
   <p>Nodes Page</p>
 </div>  
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
     
-    
-<div id="mynetwork"></div>
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    <div id="mynetwork"></div>
 
 <script type="text/javascript">
     // create an array with nodes
@@ -64,6 +87,28 @@
 
     // initialize your network!
     var network = new vis.Network(container, data, options);
+    
 </script>
+	 
+    
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    
+	   <canvas id="myChart2" ></canvas>
+    
+  </div>
+</div>  
+    
+
+    
+
+<div class="container">
+	<div class=col-lg-12>
+    <div id="drop_zone" onclick="dropzoneClick()" accept=".csv" class="well"><center><h1><i class="fa-cloud-upload"></i> Drop Your file Here (or click)</h1></center></div>
+    <input type="file" name="file" id="file" class="hide"/>
+	</div>
+</div>
+    
+</body>
 </body>
 </html>
