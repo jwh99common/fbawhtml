@@ -104,6 +104,7 @@
   	</form>
 	  
   	<script>
+	document.getElementById("employees").innerHTML = tab;
     	const myForm = document.getElementById("myForm");
     	const csvFile = document.getElementById("csvFile");
 
@@ -129,10 +130,8 @@
 	const arr = rows.map(function (row) {
         const values = row.split(delimiter);
 	
-	
-        const el = headers.reduce(function (object, header, index) {
-          console.log ('Header : ' + header);
-	  object[header] = values[index];
+	const el = headers.reduce(function (object, header, index) {
+         object[header] = values[index];
 	  return object;
         }, {});
 	return el;
@@ -157,7 +156,7 @@
 		<td>${r.Salary}</td>
 		</tr>`;
     		}
-		
+		 
       return arr;
     }
 
@@ -183,7 +182,7 @@
    
 
 <script>
-          document.getElementById("employees").innerHTML = tab;
+         
 </script>
 
 
