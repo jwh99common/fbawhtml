@@ -28,6 +28,11 @@
 <div id="header">
   <p>Nodes Page</p>
 </div>  
+	
+	
+<table id="employees", align="center"></table>
+	
+	
 <style>
 * {
   box-sizing: border-box;
@@ -139,6 +144,25 @@
 		console.log ('array : ' + i + arr[i].Name + ' ' + arr[i].Role);
 	        console.log('Region : ' +     arr[i].Region + ' ' + arr[i].Salary);
 	}
+		
+		
+	let tab = 
+        `<tr>
+          <th>Name</th>
+          <th>Office</th>
+         </tr>`;
+	
+	for(var i = 0; i < arr.length; i++) {
+		var r = arr[i]; 
+		tab += `<tr> 
+    		<td>${r.Name} </td>
+    		<td>${r.Role}</td>
+		<td>${r.Region}</td>
+		<td>${r.Salary}</td>
+		</tr>`;
+    		}
+		
+      document.getElementById("employees").innerHTML = tab;
       return arr;
     }
 
