@@ -131,12 +131,11 @@
 	console.log ('values : ' + values);
 	
         const el = headers.reduce(function (object, header, index) {
-          console.log ('element : ' index + values[index]);
-	  object[header] = values[index];
+          object[header] = values[index];
+	  console.log ('element : ' index + + header + object [header] + values[index]);
           return object;
         }, {});
-	console.log ('el:' + el.name[1]);
-        return el;
+	return el;
       });
 
       // return the array
