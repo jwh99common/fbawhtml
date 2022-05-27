@@ -104,7 +104,7 @@
   	</form>
 	  
   	<script>
-	document.getElementById("employees").innerHTML = tab;
+	
     	const myForm = document.getElementById("myForm");
     	const csvFile = document.getElementById("csvFile");
 
@@ -156,7 +156,8 @@
 		<td>${r.Salary}</td>
 		</tr>`;
     		}
-		 
+	document.getElementById("employees").innerHTML = tab;
+
       return arr;
     }
 
@@ -179,6 +180,7 @@
 
   </div>
 </div>  
+	
    
 
 <script>
