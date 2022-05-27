@@ -113,6 +113,10 @@
       	// use split to create an array of each csv value row
       	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
 	console.log ('rows :' + rows);
+		
+	for(var i = 0; i < rows.length; i++) { 
+		console.log ('row (i)' + i + rows.data (i));
+	}
 
       	// Map the rows
       	// split values from each row into an array
