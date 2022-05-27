@@ -112,12 +112,10 @@
       	// slice from \n index + 1 to the end of the text
       	// use split to create an array of each csv value row
       	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
-	console.log ('rows :' + rows);
+	console.log ('All Rows :' + rows + rows.length);
 		
 	for(var i = 0; i < rows.length; i++) { 
-		console.log (i + rows[i]);
-		console.log ('row (i)' + i + rows[i].name);
-		console.log ('rowxxxx (i)' + i + rows.name[i]);
+		console.log ('Each Row' + i + rows[i]);	
 		
 	}
 
