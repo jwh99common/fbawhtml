@@ -210,6 +210,44 @@
 	    
     });
   </script>
+	  
+<script>
+	 /* create an array with nodes
+    var nodes = new vis.DataSet([
+        {id: 1, label: 'Node a'},
+        {id: 2, label: 'Node b'},
+        {id: 3, label: 'Node c'},
+        {id: 4, label: 'Node d'},
+        {id: 5, label: 'Node e'}
+    ]);
+    */
+
+    /* create an array with edges
+    var edges = new vis.DataSet([
+        {from: 1, to: 4},
+        {from: 1, to: 3},
+        {from: 2, to: 2},
+        {from: 2, to: 1},
+        {from: 5, to: 4},
+        {from: 1, to: 5}
+      ]);
+    */
+	
+    // create a network
+    var container = document.getElementById('mynetwork');
+
+    // provide the data in the vis format
+    var data = {
+        nodes: nodes,
+        edges: edges
+    };
+	
+    var options = {};
+
+    // initialize your network!
+    var network = new vis.Network(container, data, options);
+
+</script>
   
 
   </div>
