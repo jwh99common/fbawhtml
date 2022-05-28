@@ -57,7 +57,18 @@ function setNodes () {
         edges: edges
     };
 	
-    var options = {};
+   var options = {
+  edges:{
+    arrows: 'to, from',
+    color: 'red',
+    font: '12px arial #ff0000',
+    scaling:{
+      label: true,
+    },
+    shadow: true,
+    smooth: true,
+  }
+}
 
     // initialize your network!
     var network = new vis.Network(container, data, options);
