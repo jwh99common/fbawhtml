@@ -16,7 +16,7 @@
     
     <style type="text/css">
         #mynetwork {
-            width: 600px;
+            width: 400px;
             height: 400px;
             border: 1px solid lightgray;
         }
@@ -64,10 +64,10 @@
   box-sizing: border-box;
 }
 
-/* Create two equal columns that floats next to each other */
+/* Create three equal columns that floats next to each other */
 .column {
   float: left;
-  width: 50%;
+  width: 30%;
   padding: 10px;
 }
 
@@ -83,7 +83,7 @@
   <div class="column" style="background-color:#aaa;">
     <div id="mynetwork"></div>
 
-<script type="text/javascript">
+     <script type="text/javascript">
     // create an array with nodes
     var nodes = new vis.DataSet([
         {id: 1, label: 'Node 1'},
@@ -209,8 +209,9 @@
 	    
     });
   </script>
-	  
-<script>
+ <div class="column" style="background-color:#aaa;">
+ <div id="mynetwork"></div>	  
+     <script>
 	 // create an array with nodes
     var nodes = new vis.DataSet([
         {id: 1, label: 'Node a'},
@@ -247,10 +248,10 @@
     var network = new vis.Network(container, data, options);
 
 </script>
-  
-
+	</div>
+	</div>
   </div>
-</div>  
+ 
 	
    
 
