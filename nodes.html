@@ -46,7 +46,7 @@
  	]);
 	
 	
-function resetNodes () {
+function setNodes () {
 		
     	nodes =  new vis.DataSet([
         {id: 1, label: 'Node a'},
@@ -226,7 +226,8 @@ function changeNodes () {
 		</tr>`;
     		}
 	document.getElementById("employees").innerHTML = tab;
-
+changeNodes ();
+		
 				
       return arr;
     }
@@ -253,13 +254,8 @@ function changeNodes () {
  	<div id="mynetwork"></div>	
 	
 	<script>
-		resetNodes ();
-	setTimeout(function(){
-console. log("Ready")
-}, 50000);
-		
-		changeNodes ();
-		
+	setNodes ();
+	
 	</script>
 
 </div>
