@@ -177,6 +177,10 @@ edges.add([{ from: 6, to: 1 }]);
       	// use split to create an array from string by delimiter
 	
       	const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
+		
+	for (i=0; i<headers.length;i++) {
+		console.log (headers [i]);
+	}
 	
       	// slice from \n index + 1 to the end of the text
       	// use split to create an array of each csv value row
