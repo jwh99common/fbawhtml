@@ -83,14 +83,10 @@ function changeNodes () {
         {id: 4, label: 'Node D'},
         {id: 5, label: 'Node E'}
     	]);
-   	 //
+   	//
 	
 	
-nodes.add([
-      {
-        id: 6,
-        label: 'PV Panels'
-	}]);	
+
 	
 	
     	// create an array with edges
@@ -110,9 +106,9 @@ nodes.add([
 	
       	]);
 
-/*
+
 edges.add([{ from: 6, to: 1 }]);	
-*/
+
 	
     // create a network
     var container = document.getElementById('mynetwork');
@@ -138,13 +134,11 @@ edges.add([{ from: 6, to: 1 }]);
     
     
 <body>
+	
 <div id="header">
   <p>Nodes Page</p>
 </div>  
-	
-	
 
-	
 	
 <style>
 
@@ -165,7 +159,10 @@ edges.add([{ from: 6, to: 1 }]);
 
 
 <div class="column" style="background-color:#bbb;">
-    <div id="header">	
+    <div id="header">
+	    
+	// Read Edge Data
+	    
 	<form id="myForm">
     	<input type="file" id="csvFile" accept=".csv" />
     	<br />
@@ -251,9 +248,16 @@ edges.add([{ from: 6, to: 1 }]);
     		}
 	document.getElementById("employees").innerHTML = tab;
 
+	nodes.add([
+      {
+        id: 6,
+        label: 'Barcelona'
+	}]);	
+	
 	/*
 	changeNodes ();
-	*/	
+	*/
+		
 				
       return arr;
     }
