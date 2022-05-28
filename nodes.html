@@ -218,7 +218,7 @@ edges.add([{ from: 6, to: 1 }]);
 	
 	const el = headers.reduce(function (object, header, index) {
          object[header] = values[index];
-		console.log (values [index].Name);
+		console.log (object[header]);
 		
 	  return object;
         }, {});
