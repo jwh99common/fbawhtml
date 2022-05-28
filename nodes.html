@@ -48,30 +48,6 @@
 	
 function setNodes () {
 
-/*
-    	nodes =  new vis.DataSet([
-        {id: 1, label: 'Node a'},
-        {id: 2, label: 'Node b'},
-        {id: 3, label: 'Node c'},
-        {id: 4, label: 'Node d'},
-        {id: 5, label: 'Node e'}
-    	]);
-   	 //
-
-    	// create an array with edges
-    	edges =  new vis.DataSet([
-        {from: 1, to: 4},
-        {from: 1, to: 3},
-        {from: 2, to: 2},
-        {from: 2, to: 1},
-        {from: 5, to: 4},
-        {from: 1, to: 5},
-	{from: 1, to: 2},
-	{from: 1, to: 1}
-	
-      	]);
-*/
-	
     // create a network
     var container = document.getElementById('mynetwork');
 
@@ -254,7 +230,8 @@ edges.add([{ from: 6, to: 1 }]);
 		<td>${r.Salary}</td>
 		</tr>`;
 		*/
-		edges.add([{ from: ${r.From}, to: ${r.to} }]);	
+		
+		edges.add([{ from: r.From, to: r.To }]);	
 		
 		
     		}
