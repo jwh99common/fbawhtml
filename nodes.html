@@ -16,7 +16,7 @@
     
     <style type="text/css">
         #mynetwork {
-            width: 400px;
+            width: 600px;
             height: 400px;
             border: 1px solid lightgray;
         }
@@ -208,19 +208,21 @@
       reader.readAsText(input);
 	    
     });
-  </script>
+</script>
+	  
+	  
  <div class="column" style="background-color:#aaa;">
- <div id="mynetwork"></div>	  
-     <script>
-	 // create an array with nodes
-    var nodes = new vis.DataSet([
+ 	<div id="mynetwork"></div>	  
+     	<script>
+	// create an array with nodes
+    	var nodes = new vis.DataSet([
         {id: 1, label: 'Node a'},
         {id: 2, label: 'Node b'},
         {id: 3, label: 'Node c'},
         {id: 4, label: 'Node d'},
         {id: 5, label: 'Node e'}
-    ]);
-    //
+    	]);
+   	 //
 
     // create an array with edges
     var edges = new vis.DataSet([
@@ -248,18 +250,11 @@
     var network = new vis.Network(container, data, options);
 
 </script>
-	</div>
-	</div>
-  </div>
+	 
+</div>
+</div>
+</div>
  
-	
-   
-
-<script>
-         
-</script>
-
-
-    
+  
 </body>
 </html>
