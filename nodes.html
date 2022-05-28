@@ -215,6 +215,8 @@ function resetNodes (arg) {
     		}
 	document.getElementById("employees").innerHTML = tab;
 
+		resetNodes ("B");
+		
       return arr;
     }
 
@@ -230,8 +232,7 @@ function resetNodes (arg) {
       };
       
       reader.readAsText(input);
-	resetNodes ("B");   
-         
+	         
     });
 		
 </script>
