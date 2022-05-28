@@ -64,7 +64,7 @@
   box-sizing: border-box;
 }
 
-/* Create three equal columns that floats next to each other */
+/* Create TWO  equal columns that floats next to each other */
 .column {
   float: left;
   width: 50%;
@@ -79,32 +79,6 @@
 }
 </style>
     
-<div class="row">
-	
-	<div class="column" style="background-color:#aaa;">
-		
-	<div id="mynetwork"></div>
-	
-	<script type="text/javascript">
-    	    	
-    	// create a network
-    	var container = document.getElementById('mynetwork');
-
-    	// provide the data in the vis format
-    	var data = {
-        nodes: nodes,
-        edges: edges
-    	};
-	
-    	var options = {};
-
-    	// initialize your network!
-    	var network = new vis.Network(container, data, options);
-	</script>
-	</div>
-
-
-</div>
 
 	
 <div class="column" style="background-color:#bbb;">
@@ -116,7 +90,8 @@
   	</form>
 	  
   	<script>
-/*				
+	// READ AND PARSE THE CSV
+	
     	const myForm = document.getElementById("myForm");
     	const csvFile = document.getElementById("csvFile");
 
@@ -189,12 +164,12 @@
 	    
     });
 		
-*/	
 </script>
-</div>	  
+</div>	 
 
- 	<div id="mynetwork"></div>	  
-     	<script>
+<div class="column" style="background-color:#bbb;">
+<div id="mynetwork"></div>	  
+<script>
 	// create an array with nodes
     	nodes =  new vis.DataSet([
         {id: 1, label: 'Node a'},
@@ -231,11 +206,6 @@
     var network = new vis.Network(container, data, options);
 
 </script>
-	 
 </div>
-</div>
-</div>
- 
-  
 </body>
 </html>
