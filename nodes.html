@@ -46,11 +46,9 @@ let AB = "A";
         
 	]);
 */	
-function resetNodes (arg) {
+function resetNodes () {
 	
-	console.log (arg);
 	
-	if (arg == "A" ) {
     	nodes =  new vis.DataSet([
         {id: 1, label: 'Node a'},
         {id: 2, label: 'Node b'},
@@ -72,32 +70,7 @@ function resetNodes (arg) {
 	{from: 1, to: 1}
 	
       	]);
-	}
-	else 
-	{
-	nodes =  new vis.DataSet([
-        {id: 1, label: 'Node 1'},
-        {id: 2, label: 'Node 2'},
-        {id: 3, label: 'Node 3'},
-        {id: 4, label: 'Node 4'},
-        {id: 5, label: 'Node 5'}
-    	]);
-   	 //
 
-    	// create an array with edges
-    	edges =  new vis.DataSet([
-        {from: 1, to: 4},
-        {from: 1, to: 3},
-        {from: 2, to: 2},
-        {from: 2, to: 1},
-        {from: 5, to: 4},
-        {from: 1, to: 5},
-	{from: 1, to: 2},
-	{from: 1, to: 1}
-	 ]);
-	}
-	
-    //
 	
     // create a network
     var container = document.getElementById('mynetwork');
@@ -241,8 +214,8 @@ function resetNodes (arg) {
  	<div id="mynetwork"></div>	
 	
 	<script>
-		var string = "A";
-		resetNodes (string);
+		
+		resetNodes ();
 	</script>
 
 </div>
