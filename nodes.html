@@ -100,7 +100,9 @@ nodes.add([
 	
       	]);
 
+/*
 edges.add([{ from: 6, to: 1 }]);	
+*/
 	
     // create a network
     var container = document.getElementById('mynetwork');
@@ -115,9 +117,9 @@ edges.add([{ from: 6, to: 1 }]);
 
     // initialize your network!
     var network = new vis.Network(container, data, options);
-	
+    /*
     nodes.update({id: 4, label: "changed label"});
-
+    */
 }
 	
 </script>
@@ -210,6 +212,7 @@ edges.add([{ from: 6, to: 1 }]);
         `<tr>
         <th>From</th>
         <th>To</th>
+	<th>Weighting</th>
 
  	</tr>`;
 	
@@ -226,6 +229,7 @@ edges.add([{ from: 6, to: 1 }]);
 		tab += `<tr> 
 		<td>${r.From} </td>
     		<td>${r.To}</td>
+		<td>${r.Weighting}</td>
 		</tr>`;
 		/*
     		<td>${r.Name} </td>
