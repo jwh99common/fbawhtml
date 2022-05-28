@@ -140,7 +140,7 @@ edges.add([{ from: 6, to: 1 }]);
     // initialize your network!
     var network = new vis.Network(container, data, options);
 	
-	nodes.update({id: 4, label: "changed label"});
+    nodes.update({id: 4, label: "changed label"});
 
 }
 	
@@ -189,6 +189,7 @@ edges.add([{ from: 6, to: 1 }]);
   	</form>
 	  
   	<script>
+		
 	// READ AND PARSE THE CSV
 	
     	const myForm = document.getElementById("myForm");
@@ -198,12 +199,13 @@ edges.add([{ from: 6, to: 1 }]);
 
 	// slice from start of text to the first \n index
       	// use split to create an array from string by delimiter
-      	const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
 	
+      	const headers = str.slice(0, str.indexOf("\n")).split(delimiter);
 	
       	// slice from \n index + 1 to the end of the text
       	// use split to create an array of each csv value row
-      	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
+
+	const rows = str.slice(str.indexOf("\n") + 1).split("\n");
 	
 
       	// Map the rows
@@ -211,16 +213,13 @@ edges.add([{ from: 6, to: 1 }]);
       	// use headers.reduce to create an object
       	// object properties derived from headers:values
       	// the object passed as an element of the array
-      	
-	
+ 
 	const arr = rows.map(function (row) {
         const values = row.split(delimiter);
 	
 	const el = headers.reduce(function (object, header, index) {
          object[header] = values[index];
-		console.log (object[header]);
-		
-	  return object;
+		return object;
         }, {});
 	return el;
       });
@@ -229,24 +228,43 @@ edges.add([{ from: 6, to: 1 }]);
 
 	let tab = 
         `<tr>
+        <th>From</th>
+        <th>To</th>
+
+ 	</tr>`;
+	
+ /*
+ `<tr>
         <th>Name</th>
         <th>Office</th>
 	<th>Region</th>
 	<th>Salary</th>
  	</tr>`;
-	
+*/
 	for(var i = 0; i < arr.length; i++) {
 		var r = arr[i]; 
 		tab += `<tr> 
+		<td>${r.From} </td>
+    		<td>${r.To}</td>
+		</tr>`;
+		/*
     		<td>${r.Name} </td>
     		<td>${r.Role}</td>
 		<td>${r.Region}</td>
 		<td>${r.Salary}</td>
 		</tr>`;
+		
+		edges.add([{ from: ${r.From}, to: ${r.to} }]);	
+		*/
+		
     		}
 	document.getElementById("employees").innerHTML = tab;
-changeNodes ();
+
+	
 		
+	/*
+	changeNodes ();
+	*/	
 				
       return arr;
     }
