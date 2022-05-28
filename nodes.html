@@ -168,6 +168,7 @@
       };
       console.log (input.name);
       reader.readAsText(input);
+	   
 	    
     });
 </script>
@@ -177,7 +178,7 @@
  	<div id="mynetwork"></div>	  
      	<script>
 	// create an array with nodes
-    	var nodes = new vis.DataSet([
+    	nodes =  vis.DataSet([
         {id: 1, label: 'Node a'},
         {id: 2, label: 'Node b'},
         {id: 3, label: 'Node c'},
@@ -187,7 +188,7 @@
    	 //
 
     // create an array with edges
-    var edges = new vis.DataSet([
+    	 edges =  vis.DataSet([
         {from: 1, to: 4},
         {from: 1, to: 3},
         {from: 2, to: 2},
