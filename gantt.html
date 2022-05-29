@@ -32,22 +32,32 @@
 	</div>
 	
 	<script>
-	var tasks = [
-  			{
-			id: 'Task 1',
-			name: 'Redesign website',
-			start: 	'2022-06-03',
-			end: 	'2022-06-24',
-			progress: 20
-  			},
-			{
-			id: 'Task 2',
-			name: 'Test website',
-			start: '2022-07-01',
-			end:   '2022-07-28-31',
-			progress: 50
-  			}
- 		]
+	var tasks = 
+[	
+  {
+    id: 'Task 1',
+    name: 'Prepare annotation',
+    start: '2022-7-15',
+    end: '2022-8-15',
+    progress: 20,
+  },
+  {
+    id: 'Task 2',
+    name: 'Annotating dataset',
+    start: '2022-8-15',
+    end: '2022-10-15',
+    progress: 0,
+    dependencies: 'Task 1',
+  },
+  {
+    id: 'Task 3',
+    name: 'Training Model',
+    start: '2022-10-15',
+    end: '2022-11-15',
+    progress: 0,
+    dependencies: 'Task 2',
+  },
+]
 		
 		var gantt_chart = new Gantt(".gantt-target", tasks);
 		
