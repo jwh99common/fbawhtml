@@ -118,7 +118,7 @@ ctx = document.getElementById('myChart').getContext('2d');
 
 	
 chart = new Chart(ctx, {
-    type: 'pie',
+    type: 'scatter',
     data: {
         datasets: [{
             label: 'Colors',
@@ -161,7 +161,7 @@ const data2 = {
   };
 
   const config2 = {
-    type: 'scatter',
+    type: 'line',
     data: data2,
     options: {}
   };
