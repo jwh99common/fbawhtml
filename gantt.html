@@ -14,21 +14,7 @@
   <link rel="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
 
 
-<style>
-		body {
-			font-family: sans-serif;
-			background: red;
-		}
-		.container {
-			width: 80%;
-			margin: 0 auto;
-											
-		}
-		/* custom class */
-		.gantt .bar-milestone .bar {
-			fill: tomato;
-		}
-</style>
+
 </head>
 											
 
@@ -37,8 +23,10 @@
 <body>
 	<div class="container">
 		<h2>Interactive Gantt Chart entirely made in SVG!</h2>
-		<!-- <div class="gantt-target"></div> -->
-                <svg id="gantt-target"></svg>
+		<div class="gantt-target"></div>
+					 
+<!-- <svg id="gantt-target"></svg>-->
+			   
 	</div>
 	<script>
 		var tasks = [
@@ -98,7 +86,7 @@
 				progress: 0
 			}
 		]
-		var gantt_chart = new Gantt(".gantt-target", tasks);
+		var gantt_chart = new Gantt("gantt-target", tasks);
 							   
 		console.log(gantt_chart);
 	</script>
