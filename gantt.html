@@ -12,8 +12,9 @@
 	
   <div class="header">
 		<div id="nav-placeholder"></div>
-    		<script>
-	        body { font-size : 15;}
+	  <style>body { font-size : 15;} </style>	
+	  <script>
+	        
 			
         	$.get("navigation.html", function(data){
            	 $("#nav-placeholder").replaceWith(data);
