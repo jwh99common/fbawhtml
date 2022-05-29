@@ -111,11 +111,12 @@ a {
   const config = {
     type: 'pie',
     data: data,
-    options: {},
-	  height: 400px,
+    options: {}
   };
 
 ctx = document.getElementById('myChart').getContext('2d');
+ctx.height = 500px;
+	
 chart = new Chart(ctx, {
     type: 'pie',
     data: {
@@ -130,18 +131,13 @@ chart = new Chart(ctx, {
         responsive: true,
         title:{
             display: true,
-            text: "Color test",
-		height: 400px
+            text: "Color test"
+		
         }
     }
 });
 	
-/*const myChart = new Chart(
-    document.getElementById('myChart'),
-    config
-  );	
-*/
-	
+
 	
 const labels2 = [
     'January',
@@ -172,10 +168,8 @@ const data2 = {
 	
 
 	
-const myChart2 = new Chart(
-    document.getElementById('myChart2'),
-    config2
-  );
+var  myChart2 = new Chart(    document.getElementById('myChart2'),    config2  );
+myChart2.height = 500px;
 	
 	
 </script>
