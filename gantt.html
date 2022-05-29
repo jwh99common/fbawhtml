@@ -29,14 +29,16 @@
 
 </head>
 <body>
+	
 	<div id="nav-placeholder"></div>
-    <script>
+    	<script>
 	
         $.get("navigation.html", function(data){
             $("#nav-placeholder").replaceWith(data);
         });
 	
-    </script> 	
+    	</script> 	
+
 	<div class="container">
 		<h2>Interactive Gantt Chart entirely made in SVG!</h2>
 		<div class="gantt-target"></div>
