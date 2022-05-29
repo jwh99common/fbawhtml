@@ -111,7 +111,8 @@ a {
   const config = {
     type: 'pie',
     data: data,
-    options: {}
+    options: {},
+	  height: 400px,
   };
 
 ctx = document.getElementById('myChart').getContext('2d');
@@ -129,7 +130,8 @@ chart = new Chart(ctx, {
         responsive: true,
         title:{
             display: true,
-            text: "Color test"
+            text: "Color test",
+		height: 400px
         }
     }
 });
