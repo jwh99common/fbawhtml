@@ -1,195 +1,151 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="mystyle.css">
-  <link rel="stylesheet" href="news.css">
-  <title>Food Bank Art Work</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
-
-  <div id="nav-placeholder"></div>
-    <script>
-	
-        $.get("navigation.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-	
-    </script> 
-  
-<div class="header">
-
+    <meta charset="UTF-8">
+    <title>Gantt Chart</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            width: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="dist/gantt-chart.css"/>
+    <script src="dist/gantt-chart.js"></script>
 </head>
 <body>
-  <p>....</p>
+<div class="gantt-target"></div>
+<script>
 
-<div id="chartDiv" style="max-width: 840px; min-width:330px; height: 440px;margin: 0px auto">
-</div>
+    var mock = [
+        {
+            start: '2019-06-01',
+            end: '2019-06-10',
+            name: 'Whole Project',
+            id: 'Task 0',
+            progress: 55,
+            level: 0,
+            overdue: true,
+            showOnGraph: true,
+            taskList: [
+                {
+                    start: '2019-06-10',
+                    end: '2019-06-12',
+                    name: 'Kick off',
+                    id: 'Task 1',
+                    progress: 13,
+                    level: 1,
+                    overdue: true,
+                    showOnGraph: false,
+                },
+                {
+                    start: '2019-06-10',
+                    end: '2019-06-11',
+                    name: 'Initial Task',
+                    id: 'Task 2',
+                    progress: 100,
+                    level: 2,
+                    overdue: true,
+                    showOnGraph: true,
+                },
+                {
+                    start: '2019-06-10',
+                    end: '2019-06-12',
+                    name: 'Second Task',
+                    id: 'Task 3',
+                    progress: 100,
+                    level: 3,
+                    overdue: false,
+                    showOnGraph: true,
+                }
+            ]
+        },
+        {
+            start: '2019-06-10',
+            end: '2019-06-12',
+            name: 'Stabilization',
+            id: 'Task 4',
+            progress: 0,
+            level: 0,
+            overdue: false,
+            showOnGraph: true,
+            taskList: [
+                {
+                    start: '2019-06-10',
+                    end: '2019-06-11',
+                    name: 'Refactoring code',
+                    id: 'Task 5',
+                    progress: 0,
+                    level: 1,
+                    overdue: false,
+                    showOnGraph: true,
+                },
+                {
+                    start: '2019-07-01',
+                    end: '2019-07-25',
+                    name: 'Unit Test',
+                    id: 'Task 6',
+                    progress: 0,
+                    level: 3,
+                    overdue: false,
+                    showOnGraph: true,
+                },
+                {
+                    start: '2019-06-10',
+                    end: '2019-06-10',
+                    name: 'Full Regression Tests',
+                    id: 'Task 7',
+                    progress: 0,
+                    level: 3,
+                    overdue: false,
+                    showOnGraph: true,
+                }
+            ]
+        }
+    ];
 
-  <script>
-    // JS 
-  
-var currentDate = '4/20/2022'; 
-var thresholdDate = norm(currentDate); 
-  
-var chart = JSC.chart('chartDiv', { 
-  debug: true, 
-  title_label_text: 
-    'Project Beta from %min to %max', 
-  type: 'horizontal column solid', 
-  zAxis_scale_type: 'stacked', 
-  palette: ['#9adcfa', '#99e4ed', '#d0b6fa'], 
-  legend: { 
-    position: 'inside right top', 
-    template: '%icon %name'
-  }, 
-  toolbar_items_export_position: 
-    'inside bottom left', 
-  yAxis: { 
-    scale_type: 'time', 
-    scale_range_padding: 0.15, 
-    markers: [ 
-      { 
-        value: currentDate, 
-        color: 'red', 
-        label_text: 'Now'
-      } 
-    ] 
-  }, 
-  defaultPoint: { 
-    outline_width: 0, 
-    radius: 0, 
-    label: { 
-      text: pointLabelText, 
-      placement: 'outside'
-    }, 
-    tooltip: 
-      '<b>%name</b> %low - %high<br/>{days(%high-%low)} days'
-  }, 
-  yAxis_scale_type: 'time', 
-  defaultSeries: { 
-    firstPoint: { 
-      outline: { color: 'darkenMore', width: 2 }, 
-      xAxisTick_label_text: '<b>%value</b>'
-    } 
-  }, 
-  series: [ 
-    { 
-      name: 'Initiate Project', 
-      points: [ 
-        { 
-          name: 'Initiate Project', 
-          y: ['1/1/2020', '3/15/2020'] 
-        }, 
-        { 
-          name: 'Project Assignments', 
-          y: ['1/1/2020', '1/25/2020'] 
-        }, 
-        { 
-          name: 'Outlines/Scope', 
-          y: ['1/25/2020', '2/15/2020'] 
-        }, 
-        { 
-          name: 'Business Alignment', 
-          y: ['2/15/2020', '3/15/2020'] 
-        } 
-      ] 
-    }, 
-    { 
-      name: 'Plan Project', 
-      points: [ 
-        { 
-          name: 'Plan Project', 
-          y: ['3/15/2020', '5/20/2020'] 
-        }, 
-        { 
-          name: 'Determine Process', 
-          y: ['3/15/2020', '4/12/2020'] 
-        }, 
-        { 
-          name: 'Design Layouts', 
-          y: ['4/12/2020', '5/8/2020'] 
-        }, 
-        { 
-          name: 'Design Structure', 
-          y: ['5/8/2020', '5/20/2020'] 
-        } 
-      ] 
-    }, 
-    { 
-      name: 'Implement Project', 
-      points: [ 
-        { 
-          name: 'Implement Project', 
-          y: ['5/20/2020', '7/28/2020'] 
-        }, 
-        { 
-          name: 'Designs', 
-          y: ['5/20/2020', '6/10/2020'] 
-        }, 
-        { 
-          name: 'Structures', 
-          y: ['6/10/2020', '6/15/2020'] 
-        }, 
-        { 
-          name: 'D&S Integration', 
-          y: ['6/15/2020', '7/28/2020'] 
-        } 
-      ] 
-    } 
-  ] 
-}); 
-  
-/** 
- * Chooses the data point label icon based on the thresholdDate 
- * @param point 
- * @returns {*} 
- */
-function pointLabelText(point) { 
-  var pY = point.options('y'); 
-  var pRange = pY.map(norm); 
-  if (thresholdDate > pRange[1]) { 
-    return getIconText( 
-      'material/navigation/check', 
-      '#66BB6A', 
-      16 
-    ); 
-  } else if (thresholdDate > pRange[0]) { 
-    return getIconText( 
-      'material/notification/sync', 
-      '#FDD835', 
-      20 
-    ); 
-  } 
-  return getIconText( 
-    'material/navigation/close', 
-    '#FF5252', 
-    16 
-  ); 
-} 
-  
-function norm(d) { 
-  return new Date(d).getTime(); 
-} 
-  
-function getIconText(name, color, size) { 
-  return ( 
-    '<icon name=' + 
-    name + 
-    ' size=' + 
-    size + 
-    ' fill=' + 
-    color + 
-    '>'
-  ); 
-} 
-  </script>
+    var mock2 = [
+        {
+            start: '2019-06-01',
+            end: '2019-06-10',
+            name: 'Refreshed Tasks',
+            id: 'Task 0',
+            progress: 55,
+            level: 0,
+            overdue: true,
+            taskList: [
+                {
+                    start: '2019-06-10',
+                    end: '2019-06-12',
+                    name: 'Refreshed Tasks',
+                    id: 'Task 1',
+                    progress: 13,
+                    level: 1,
+                    overdue: true
+                }
+            ]
+        }
+    ];
 
+    const gantt_chart = new GanttChart('.gantt-target', mock, {
+        on_click: function(task) {
+            console.log('Task clicked: ', task);
+        },
+        on_date_change: function(task, start, end) {
+            console.log('Date changed ', task, start, end);
+        },
+        on_progress_change: function(task, progress) {
+            console.log('Progress Change ', task, progress);
+        },
+        on_view_change: function(mode) {
+            console.log('View mode: ', mode);
+        },
+        view_mode: 'Week',
+        language: 'en',
+        project_overview: false
+    });
 
-	
- 
+    //gantt_chart.refresh(mock2);
 
-	
-
-</body?
-
+</script>
+</body>
 </html>
