@@ -14,9 +14,6 @@
   	$("#nav-placeholder").replaceWith(data);
   });
 </script> 
-
-
-
 	
 <style>
 	
@@ -48,20 +45,7 @@ a {
   display: block;
   color: #3e95cd;
 }
-</style>
 
-
-</head>
-
-<body>
-	
-<div id="header">
-  <p>Graphics process</p>
-</div>
-
-	
-
-<style>
 * {
   box-sizing: border-box;
 }
@@ -81,6 +65,26 @@ a {
 }
 </style>
 
+</head>
+
+<body>
+	
+<div id="header">
+  <p>Graphics process</p>
+</div>
+	
+<div class="row">
+  <div class="column" style="background-color:#aaa;">
+    
+	  <canvas id="myChart" ></canvas>
+    
+  </div>
+  <div class="column" style="background-color:#bbb;">
+    
+	   <canvas id="myChart2" ></canvas>
+    
+  </div>
+</div>
 	
 <script>
   const labels = [
@@ -173,22 +177,6 @@ const myChart2 = new Chart(
 	
 	
 </script>
-	
-<div class="row">
-  <div class="column" style="background-color:#aaa;">
-    
-	  <canvas id="myChart" ></canvas>
-    
-  </div>
-  <div class="column" style="background-color:#bbb;">
-    
-	   <canvas id="myChart2" ></canvas>
-    
-  </div>
-</div>
-	
-	
-
 	
 
 </body>
