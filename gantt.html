@@ -1,8 +1,11 @@
 <html>
 	
 <head>
+	
+  <script src="https://github.com/frappe/gantt/frappe-gantt.min.js"></script>
   <link rel="stylesheet" href="mystyle.css">
   <link rel="stylesheet" href="news.css">
+  <link rel="https://github.com/frappe/gantt/blob/master/src/gantt.scss">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
   
 
@@ -21,6 +24,37 @@
   <p>Nothing to see here yet</p>
 </div>
 
-
+<svg id="gantt"></svg>
+<script>
+var tasks = [
+  {
+	id: 'Task 1',
+	name: 'Redesign website',
+	start: '2016-12-28',
+	end: '2016-12-31',
+	progress: 70,
+	dependencies: 'Task 2, Task 3'
+  },
+  {
+	id: 'Task 2',
+	name: 'Redesign website',
+	start: '2016-12-28',
+	end: '2016-12-31',
+	progress: 40,
+	dependencies: 'Task 3'
+  },
+{
+	id: 'Task 3',
+	name: 'Redesign website',
+	start: '2016-12-28',
+	end: '2016-12-31',
+	progress: 30
+	
+  },
+]
+var gantt = new Gantt("#gantt", tasks);
+	
+</script>
+	
 </body>
 </html>
