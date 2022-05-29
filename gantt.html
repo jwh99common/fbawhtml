@@ -6,9 +6,12 @@
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
 	
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="news.css">
+  <title>Food Bank Art Work</title>
 	
 	
-	<title>Simple Gantt</title>
+	
 	<style>
 		body {
 			font-family: sans-serif;
@@ -23,7 +26,14 @@
 			fill: tomato;
 		}
 	</style>
+<div id="nav-placeholder"></div>
+    <script>
 	
+        $.get("navigation.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+	
+    </script> 	
 </head>
 <body>
 	<div class="container">
