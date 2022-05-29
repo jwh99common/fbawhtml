@@ -1,15 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
+  <link rel="stylesheet" href="mystyle.css">
+  <link rel="stylesheet" href="news.css">
+  <title>Food Bank Art Work</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.min.js"></script>
 	
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
 	
-  <link rel="stylesheet" href="mystyle.css">
-  <link rel="stylesheet" href="news.css">
-  <title>Food Bank Art Work</title>
+  <div class="header">
+		<div id="nav-placeholder"></div>
+    		<script>
 	
+        	$.get("navigation.html", function(data){
+           	 $("#nav-placeholder").replaceWith(data);
+        	});
+	
+    		</script> 	
+	</div>
 	
 	
 	<style>
@@ -26,16 +36,7 @@
 			fill: tomato;
 		}
 	</style>
-<div class="header">
-		<div id="nav-placeholder"></div>
-    		<script>
-	
-        	$.get("navigation.html", function(data){
-           	 $("#nav-placeholder").replaceWith(data);
-        	});
-	
-    		</script> 	
-	</div>
+
 </head>
 <body>
 	
