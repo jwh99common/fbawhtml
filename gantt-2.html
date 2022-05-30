@@ -4,159 +4,134 @@
     <meta charset="UTF-8">
     <title>Gantt Chart</title>
 	
-   
+   <script src="https://unpkg.com/timelines-chart"></script>
 	
-	
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.min.js"></script>
-    	<script src="dist/gantt-chart.js"></script>
-
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
-        <link rel="stylesheet" href="dist/gantt-chart.css"/>
-  	<style>
-        	body {
-            	font-family: sans-serif;
-            	width: auto;
-        	}
-    	</style>   
+	    	
+  	
 	
 </head>
 <body>
-<div class="gantt-target"></div>
 <script>
+	myData = [
+  {
+    group: "group1",
+    data: [
+      {
+        label: "label1",
+        data: [
+          {
+            timeRange: [<date>, <date>],
+            val: <val: number (continuous dataScale) or string (ordinal dataScale)> 
+          },
+          {
+            timeRange: [<date>, <date>],
+            val: <val>
+          },
+          (...)
+        ]
+      },
+      {
+        label: "label2",
+        data: [...]
+      },
+      (...)
+    ],
+  },
+  {
+    group: "group2",
+    data: [...]
+  },
+]
 
-    var mock = [
-        {
-            start: '2022-06-01',
-            end: '2022-12-10',
-            name: 'Whole Project',
-            id: 'Task 0',
-            progress: 55,
-            level: 0,
-            overdue: true,
-            showOnGraph: true,
-		
-            taskList: [
-                {
-                    start: '2022-06-10',
-                    end: '2022-06-12',
-                    name: 'Kick off',
-                    id: 'Task 1',
-                    progress: 13,
-                    level: 1,
-                    overdue: true,
-                    showOnGraph: true,
-                },
-                {
-                    start: '2022-06-10',
-                    end: '2022-06-11',
-                    name: 'Initial Task',
-                    id: 'Task 2',
-                    progress: 100,
-                    level: 1,
-                    overdue: true,
-                    showOnGraph: true,
-                },
-                {
-                    start: '2022-06-10',
-                    end: '2022-06-12',
-                    name: 'Second Task',
-                    id: 'Task 3',
-                    progress: 100,
-                    level: 1,
-                    overdue: false,
-                    showOnGraph: true,
-                },
-            ],
-        },
-        {
-            start: '2022-06-10',
-            end: '2022-06-12',
-            name: 'Stabilization',
-            id: 'Task 4',
-            progress: 0,
-            level: 0,
-            overdue: false,
-            showOnGraph: true,
-            taskList: [
-                {
-                    start: '2022-06-10',
-                    end: '2022-06-11',
-                    name: 'Refactoring code',
-                    id: 'Task 5',
-                    progress: 0,
-                    level: 1,
-                    overdue: false,
-                    showOnGraph: true,
-                },
-                {
-                    start: '2022-07-01',
-                    end: '2022-07-25',
-                    name: 'Unit Test',
-                    id: 'Task 6',
-                    progress: 0,
-                    level: 1,
-                    overdue: false,
-                    showOnGraph: true,
-                },
-                {
-                    start: '2022-06-10',
-                    end: '2022-06-10',
-                    name: 'Full Regression Tests',
-                    id: 'Task 7',
-                    progress: 0,
-                    level: 1,
-                    overdue: false,
-                    showOnGraph: true,
-                },
-            ],
-        },
-    ];
-
-    var mock2 = [
-        {
-            start: '2022-06-01',
-            end: '2022-06-10',
-            name: 'Refreshed Tasks',
-            id: 'Task 0',
-            progress: 55,
-            level: 0,
-            overdue: true,
-            taskList: [
-                {
-                    start: '2022-06-10',
-                    end: '2022-06-12',
-                    name: 'Refreshed Tasks',
-                    id: 'Task 1',
-                    progress: 13,
-                    level: 1,
-                    overdue: true
-                },
-            ],
-        },
-    ];
-
-    const gantt_chart = new GanttChart('.gantt-target', mock);
-
-	/*
-        on_click: function(task) {
-            console.log('Task clicked: ', task);
-        },
-        on_date_change: function(task, start, end) {
-            console.log('Date changed ', task, start, end);
-        },
-        on_progress_change: function(task, progress) {
-            console.log('Progress Change ', task, progress);
-        },
-        on_view_change: function(mode) {
-            console.log('View mode: ', mode);
-        },
-        view_mode: 'Week',
-        language: 'en',
-        project_overview: false
-    });
-   */
-    // gantt_chart.refresh(mock2);
-
-</script>
+const myChart = TimelinesChart();
+// get/set data
+myChart.data([array]);
+// get/set chart width
+myChart.width([number]);
+// get/set the max height of the chart
+// defaults to 640
+myChart.maxHeight([number]);
+// get/set the max height of the timeline
+// defaults to 12
+myChart.maxLineHeight([number]);
+// get/set the left margin of the timeline
+// defaults to 90
+myChart.leftMargin([number]);
+// get/set the right margin of the timeline
+// defaults to 100
+myChart.rightMargin([number]);
+// get/set the top margin of the timeline
+// defaults to 26
+myChart.topMargin([number]);
+// get/set the bottom margin of the timeline
+// defaults to 30
+myChart.bottomMargin([number]);
+// determine whether to display time in the local time zone (false) or in UTC (true)
+// defaults to false
+myChart.useUtc([boolean]);
+// time format to use in tooltips
+// defaults to %Y-%m-%d %-I:%M:%S %p
+myChart.timeFormat([string]);
+// X axis tick label formatter function
+myChart.xTickFormat([function]);
+// get/set the date marker to show as a vertical line
+// defaults to null
+myChart.dateMarker([date object]);
+// get/set the minimum time duration (in msecs) of a segment
+// defaults to 0
+myChart.minSegmentDuration([number]);
+// return the number of timelines currently visible in the chart
+myChart.getNLines();
+// return the total number of timelines currently visible in the chart
+myChart.getTotalNLines();
+// determine whether the segment data color values are categorical (true) or quantitative (false)
+// defaults to false
+myChart.zQualitative([boolean]);
+// get/set the color scale to be used for coloring the segments according to their data values
+// this object should be a D3 color scale object
+myChart.zColorScale([d3 scale object]);
+// get/set the units of z data (tooltip descriptions)
+myChart.zDataLabel([string]);
+// get/set the color scale label
+myChart.zScaleLabel([string]);
+// data sorting function
+// function(labelCmpFn, groupCompFn). 
+// each comparison function should follow the signature function(nameA, nameB) and return a numeric value.
+myChart.sort([[function, function]]);
+// sort the timelines and groups in alpha-numeric order
+// defaults to true
+myChart.sortAlpha([[boolean]]);
+// sort the timelines and groups in  chronological order of their most recent data point
+// defaults to true
+myChart.sortChrono([[boolean]]);
+// set/get chart zoom
+// defaults to null
+myChart.zoomX([[startDate, endDate]]);
+myChart.zoomY([[number, number]]);
+// set/get chart's vertical zoom in terms of timeline labels
+myChart.zoomYLabels([[number, number]]);
+// callback
+myChart.onZoom(([startDate, endDate], [startY, endY]); 
+// determine whether to show an interactive timeline overview below the chart
+// defaults to true
+myChart.enableOverview([boolean]);
+// get/set the time extent shown in the overview section below the chart
+myChart.overviewDomain([[startDate, endDate]]);
+// return data representation of timelines currently visible in the chart
+myChart.getVisibleStructure();
+// returns graphic (SVG) representation of currently visible chart
+myChart.getSvg();
+// determine whether to animate transitions
+// defaults to true
+myChart.enableAnimations([boolean]);
+// callback
+// callback will include the clicked label (if applicable) and group parameter: onLabelClick(<string>, <string>)
+myChart.onLabelClick([function]);
+// callback
+// callback will return a segment object: onSegmentClick(segment)
+myChart.onSegmentClick([function]);
+// refresh the chart
+myChart.refresh();
+	 
 </body>
 </html>
