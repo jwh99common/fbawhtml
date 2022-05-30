@@ -6,144 +6,33 @@
 	
    <script src="https://unpkg.com/timelines-chart"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 	
-	    	
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+       
+   	    	
   	
 	
 </head>
 <body>
-<div id="header">
-  <p>CSS Page</p>
-  <p style="font-size: 20px">We are simply using a javascript file</p>
-  <p style="font-size: 20px">to change the layout of some page elements</p>
-  <a href="https://github.com/jwh99common/fbawhtml/blob/main/js/css.js", style="font-size: 20px", align="center">CSS Code</a>
-  
 	
+<div id="timeline" style="height: 180px;"></div>
+
+	<script>
+ google.charts.load('current', {'packages':['timeline']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var container = document.getElementById('timeline');
+        var chart = new google.visualization.Timeline(container);
+        var dataTable = new google.visualization.DataTable();
+
+        dataTable.addColumn({ type: 'string', id: 'President' });
+        dataTable.addColumn({ type: 'date', id: 'Start' });
+        dataTable.addColumn({ type: 'date', id: 'End' });
+        dataTable.addRows([
+          [ 'Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
+          [ 'Adams',      new Date(1797, 2, 4),  new Date(1801, 2, 4) ],
+          [ 'Jefferson',  new Date(1801, 2, 4),  new Date(1809, 2, 4) ]]);
+
+        chart.draw(dataTable);
+      }	
 <script>
-	myData = [
-  {
-    group: "group1",
-    data: [
-      {
-        label: "label1",
-        data: [
-          {
-            timeRange: [<date>, <date>],
-            val: <val: number (continuous dataScale) or string (ordinal dataScale)> 
-          },
-          {
-            timeRange: [<date>, <date>],
-            val: <val>
-          },
-          (...)
-        ]
-      },
-      {
-        label: "label2",
-        data: [...]
-      },
-      (...)
-    ],
-  },
-  {
-    group: "group2",
-    data: [...]
-  },
-]
-	  
-	 TimelinesChart()(element)
-.data(myData);
-
-const myChart = TimelinesChart();
-// get/set data
-myChart.data([array]);
-// get/set chart width
-myChart.width([number]);
-// get/set the max height of the chart
-// defaults to 640
-myChart.maxHeight([number]);
-// get/set the max height of the timeline
-// defaults to 12
-myChart.maxLineHeight([number]);
-// get/set the left margin of the timeline
-// defaults to 90
-myChart.leftMargin([number]);
-// get/set the right margin of the timeline
-// defaults to 100
-myChart.rightMargin([number]);
-// get/set the top margin of the timeline
-// defaults to 26
-myChart.topMargin([number]);
-// get/set the bottom margin of the timeline
-// defaults to 30
-myChart.bottomMargin([number]);
-// determine whether to display time in the local time zone (false) or in UTC (true)
-// defaults to false
-myChart.useUtc([boolean]);
-// time format to use in tooltips
-// defaults to %Y-%m-%d %-I:%M:%S %p
-myChart.timeFormat([string]);
-// X axis tick label formatter function
-myChart.xTickFormat([function]);
-// get/set the date marker to show as a vertical line
-// defaults to null
-myChart.dateMarker([date object]);
-// get/set the minimum time duration (in msecs) of a segment
-// defaults to 0
-myChart.minSegmentDuration([number]);
-// return the number of timelines currently visible in the chart
-myChart.getNLines();
-// return the total number of timelines currently visible in the chart
-myChart.getTotalNLines();
-// determine whether the segment data color values are categorical (true) or quantitative (false)
-// defaults to false
-myChart.zQualitative([boolean]);
-// get/set the color scale to be used for coloring the segments according to their data values
-// this object should be a D3 color scale object
-myChart.zColorScale([d3 scale object]);
-// get/set the units of z data (tooltip descriptions)
-myChart.zDataLabel([string]);
-// get/set the color scale label
-myChart.zScaleLabel([string]);
-// data sorting function
-// function(labelCmpFn, groupCompFn). 
-// each comparison function should follow the signature function(nameA, nameB) and return a numeric value.
-myChart.sort([[function, function]]);
-// sort the timelines and groups in alpha-numeric order
-// defaults to true
-myChart.sortAlpha([[boolean]]);
-// sort the timelines and groups in  chronological order of their most recent data point
-// defaults to true
-myChart.sortChrono([[boolean]]);
-// set/get chart zoom
-// defaults to null
-myChart.zoomX([[startDate, endDate]]);
-myChart.zoomY([[number, number]]);
-// set/get chart's vertical zoom in terms of timeline labels
-myChart.zoomYLabels([[number, number]]);
-// callback
-myChart.onZoom(([startDate, endDate], [startY, endY]); 
-// determine whether to show an interactive timeline overview below the chart
-// defaults to true
-myChart.enableOverview([boolean]);
-// get/set the time extent shown in the overview section below the chart
-myChart.overviewDomain([[startDate, endDate]]);
-// return data representation of timelines currently visible in the chart
-myChart.getVisibleStructure();
-// returns graphic (SVG) representation of currently visible chart
-myChart.getSvg();
-// determine whether to animate transitions
-// defaults to true
-myChart.enableAnimations([boolean]);
-// callback
-// callback will include the clicked label (if applicable) and group parameter: onLabelClick(<string>, <string>)
-myChart.onLabelClick([function]);
-// callback
-// callback will return a segment object: onSegmentClick(segment)
-myChart.onSegmentClick([function]);
-// refresh the chart
-myChart.refresh();
-
-	</script>
-	</div>
-</body>
 </html>
