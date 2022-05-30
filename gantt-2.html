@@ -41,9 +41,19 @@
 
     var options = {
       timeline: { colorByRowLabel: true },
-      alternatingRowStyle: false
+      alternatingRowStyle: false,
+	    
+	    backgroundColor: '#ffd'
     };
-
+/*	  
+	  var options = {
+      timeline: { colorByRowLabel: true },
+      tooltip: {isHtml: true},
+      legend: 'none',
+      backgroundColor: '#ffd'
+    };
+*/
+	  
     chart.draw(dataTable, options);
   }
 </script>
