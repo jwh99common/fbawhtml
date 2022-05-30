@@ -8,6 +8,8 @@ export default {
         d1 = new Date()
         // in one minute
         d2 = new Date(d1.getTime()+60000)
+        console.log (d1);
+        console.log (d2);
         
         // Value is the string representation of the expiry time
         return { value: d2.toTimeString(), expiration: d2 };
