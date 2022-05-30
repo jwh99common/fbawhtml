@@ -8,7 +8,9 @@
     next, // used for middleware or to fetch assets
     data, // arbitrary space for passing data between middlewares
     } = context;
-
+  
+return new Response("Hello, world!");
+  
        const cached_time = await env.CACHE.read("someCacheKey", async (key) => {
         // time now
         d1 = new Date();
