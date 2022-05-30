@@ -1,7 +1,7 @@
  export async function onRequest(context) {
      
 
-      cached_time = await env.CACHE.read("someCacheKey", async (key) => {
+       const cached_time = await env.CACHE.read("someCacheKey", async (key) => {
         // time now
         d1 = new Date()
         // in one minute
