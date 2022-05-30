@@ -9,7 +9,9 @@
     data, // arbitrary space for passing data between middlewares
     } = context;
   
+/*
 return new Response("Hello, world!");
+*/
   
        const cached_time = await env.CACHE.read("someCacheKey", async (key) => {
         // time now
@@ -18,18 +20,19 @@ return new Response("Hello, world!");
         d2 = new Date(d1.getTime()+60000);
         console.log (d1);
         console.log (d2);
+        return new Response("cache!");
         
         // Value is the string representation of the expiry time
         
          
           body = "<html><body>\n";
-      body += "time: " + cached_time + "</p>\n";
-      body += "d1 : " + d1+ "'</p>\n";
-      body += "d2 " + from_qs_without + "'</p>\n";
-      body += "</body></html>";
-        return  new repsone (body);
+          body += "time: " + cached_time + "</p>\n";
+          body += "d1 : " + d1+ "'</p>\n";
+          body += "d2 " + from_qs_without + "'</p>\n";
+          body += "</body></html>";
+          return  new repsone (body);
         
-      })
+      });
 
       from_qs_with = await env.RULES.get("28181987:429827431:cdn:flame-test-data");
   
