@@ -8,13 +8,7 @@
 
   <!-- REF: https://developers.google.com/chart/interactive/docs/gallery/timeline -->
   <script src="https://www.gstatic.com/charts/loader.js"></script>
-	   <link rel="stylesheet" href="mystyle.css">
-<div id="nav-placeholder"></div>
-<script>
-        $.get("navigation.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-</script>    
+
 
 	  
 <script>
@@ -66,9 +60,17 @@ function drawChart() {
 </script>
 	  
 
+<link rel="stylesheet" href="mystyle.css">
     
  </head>
 <body>
+<div id="nav-placeholder"></div>
+<script>
+        $.get("navigation.html", function(data){
+            $("#nav-placeholder").replaceWith(data);
+        });
+</script>    	
+	
 <div class="header">
 	<p>MCP Scheduling</p>
 	</div>
