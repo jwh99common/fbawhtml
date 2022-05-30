@@ -30,8 +30,12 @@ return new Response("Hello, world!");
           body += "d1 : " + d1+ "'</p>\n";
           body += "d2 " + from_qs_without + "'</p>\n";
           body += "</body></html>";
-          return  new repsone (body);
-        
+          return new Response('Hello worker!', {
+    headers: {
+      'content-type': 'text/html',
+      "Access-Control-Allow-Origin": "*"
+    },
+  })
       });
 
       from_qs_with = await env.RULES.get("28181987:429827431:cdn:flame-test-data");
