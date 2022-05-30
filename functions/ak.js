@@ -1,7 +1,5 @@
  export async function onRequest(context) {
-  
-
-    try {
+     
 
       cached_time = await env.CACHE.read("someCacheKey", async (key) => {
         // time now
@@ -24,8 +22,6 @@
       body += "from_qs_without: '" + from_qs_without + "'</p>\n"
       body += "</body></html>"
 
-      return new Response(body, {    headers: {      'content-type': 'text/html;charset=UTF-8'    },  })     }catch (error) {
-      return new Response(error.stack, { status: 500 })
-    }
-  }
-}
+      return new Response(body)
+    
+ }
