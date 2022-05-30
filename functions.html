@@ -10,6 +10,15 @@
 <body>
 	
 <script>
+(async () => {
+
+  const response = await fetch('/functions/ak.js');
+  var text = await response.text();
+  console.log ('a   :   ' + text);
+
+})();
+	
+	
 /*
 (async () => {
 
@@ -37,7 +46,7 @@
 })()	;
 
 */
-	
+/* these two work	
 (async () => {
 	
   const response = await fetch('/hw');
@@ -51,7 +60,10 @@
   var text = await response.text();
  console.log ('e   :  ' + text);
 })()		;
+*/
 
+	
+	
 
 	
 /*
