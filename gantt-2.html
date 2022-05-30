@@ -3,32 +3,40 @@
     
   <!-- REF: https://developers.google.com/chart/interactive/docs/gallery/timeline -->
     
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<script type="text/javascript">
+<script>
   google.charts.load("current", {packages:["timeline"]});
   google.charts.setOnLoadCallback(drawChart);
   function drawChart() {
-    var container = document.getElementById('example2.1');
+    var container = document.getElementById('example5.4');
     var chart = new google.visualization.Timeline(container);
     var dataTable = new google.visualization.DataTable();
-
-    dataTable.addColumn({ type: 'string', id: 'Term' });
+    dataTable.addColumn({ type: 'string', id: 'Room' });
     dataTable.addColumn({ type: 'string', id: 'Name' });
     dataTable.addColumn({ type: 'date', id: 'Start' });
     dataTable.addColumn({ type: 'date', id: 'End' });
-
     dataTable.addRows([
-      [ '1', 'George Washington', new Date(1789, 3, 30), new Date(1797, 2, 4) ],
-      [ '2', 'John Adams',        new Date(1797, 2, 4),  new Date(1801, 2, 4) ],
-      [ '3', 'Thomas Jefferson',  new Date(1801, 2, 4),  new Date(1809, 2, 4) ]]);
+      [ 'Magnolia Room',  'CSS Fundamentals',    new Date(0,0,0,12,0,0),  new Date(0,0,0,14,0,0) ],
+      [ 'Magnolia Room',  'Intro JavaScript',    new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
+      [ 'Magnolia Room',  'Advanced JavaScript', new Date(0,0,0,16,30,0), new Date(0,0,0,19,0,0) ],
+      [ 'Gladiolus Room', 'Intermediate Perl',   new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
+      [ 'Gladiolus Room', 'Advanced Perl',       new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
+      [ 'Gladiolus Room', 'Applied Perl',        new Date(0,0,0,16,30,0), new Date(0,0,0,18,0,0) ],
+      [ 'Petunia Room',   'Google Charts',       new Date(0,0,0,12,30,0), new Date(0,0,0,14,0,0) ],
+      [ 'Petunia Room',   'Closure',             new Date(0,0,0,14,30,0), new Date(0,0,0,16,0,0) ],
+      [ 'Petunia Room',   'App Engine',          new Date(0,0,0,16,30,0), new Date(0,0,0,18,30,0) ]]);
 
-    chart.draw(dataTable);
+    var options = {
+      timeline: { colorByRowLabel: true },
+      alternatingRowStyle: false
+    };
+
+    chart.draw(dataTable, options);
   }
 </script>
-  </head> 
-
+ </head> 
   <body>
-    <div id="example2.1" style="height: 200px;"></div>
+    
+   <div id="example5.4" style="height: 150px;"></div>
+   
   </body>
 </html>
