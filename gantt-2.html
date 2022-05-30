@@ -7,7 +7,7 @@
   <!-- REF: https://developers.google.com/chart/interactive/docs/gallery/timeline -->
     
     
-    <script src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="https://www.gstatic.com/charts/loader.js"></script>
     
 <script>
 	/*
@@ -16,9 +16,9 @@
 	new Date(year, month, day, hours, minutes, seconds, milliseconds)
 	*/
 	
-  google.charts.load("current", {packages:["timeline"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
+google.charts.load("current", {packages:["timeline"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
     var container = document.getElementById('example5.4');
     var chart = new google.visualization.Timeline(container);
     var dataTable = new google.visualization.DataTable();
@@ -40,8 +40,9 @@
                      );
 
     var options = {
-      timeline: { colorByRowLabel: true },
-      alternatingRowStyle: false
+      	timeline: { colorByRowLabel: true },
+ 	tooltip: {isHtml: true},
+      	alternatingRowStyle: false
     };
 /*	  
 	  var options = {
@@ -61,7 +62,7 @@
  </head>
 <body>
 	
-   <div id="example5.4" style="height: 500px;"></div>
+   <div style="background-colour:white;" id="example5.4" style="height: 500px;"></div>
    
   </body>
 </html>
