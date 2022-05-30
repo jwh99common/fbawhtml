@@ -5,12 +5,19 @@
     <title>Gantt Chart</title>
 	
    <script src="https://unpkg.com/timelines-chart"></script>
-	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 	
 	    	
   	
 	
 </head>
 <body>
+<div id="header">
+  <p>CSS Page</p>
+  <p style="font-size: 20px">We are simply using a javascript file</p>
+  <p style="font-size: 20px">to change the layout of some page elements</p>
+  <a href="https://github.com/jwh99common/fbawhtml/blob/main/js/css.js", style="font-size: 20px", align="center">CSS Code</a>
+  
+	
 <script>
 	myData = [
   {
@@ -135,6 +142,8 @@ myChart.onLabelClick([function]);
 myChart.onSegmentClick([function]);
 // refresh the chart
 myChart.refresh();
-	 
+
+	</script>
+	</div>
 </body>
 </html>
