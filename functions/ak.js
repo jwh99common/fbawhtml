@@ -24,8 +24,7 @@ export default {
       body += "from_qs_without: '" + from_qs_without + "'</p>\n"
       body += "</body></html>"
 
-      return new Response(body)
-    }catch (error) {
+      return new Response(body, {    headers: {      'content-type': 'text/html;charset=UTF-8'    },  })     }catch (error) {
       return new Response(error.stack, { status: 500 })
     }
   }
