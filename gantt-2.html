@@ -12,12 +12,7 @@
 
 	  
 <script>
-	/*
-	new Date(year, month, day, hours, minutes, seconds, milliseconds)
-  	
-	new Date(year, month, day, hours, minutes, seconds, milliseconds)
-	*/
-	
+
 google.charts.load("current", {packages:["timeline"]});
 google.charts.setOnLoadCallback(drawChart);
 function drawChart() {
@@ -46,47 +41,22 @@ function drawChart() {
  	tooltip: {isHtml: true},
       	alternatingRowStyle: false
     };
-/*	  
-	  var options = {
-      timeline: { colorByRowLabel: true },
-      tooltip: {isHtml: true},
-      legend: 'none',
-      backgroundColor: '#ffd'
-    };
-*/
 	  
     chart.draw(dataTable, options);
   }
 </script>
 	  
 
-<link rel="stylesheet" href="mystyle.css">
-    
- </head>
+</head>
+
 <body>
-<div id="nav-placeholder"></div>
-<script>
-        $.get("navigation.html", function(data){
-            $("#nav-placeholder").replaceWith(data);
-        });
-</script>    	
 	
 <div class="header">
 	<p>MCP Scheduling</p>
-	</div>
-<style>
-
-
-a:hover {
-  color: red;
-  background-color: white;
-  text-decoration: underline;
-}
-
-</style>
-
+</div>
 	
-   <div id="example5.4" style="height: 500px;"></div>
+	<div id="example5.4" style="height: 500px;"></div>
    
-  </body>
+</body>
+
 </html>
