@@ -1,27 +1,24 @@
 <head>
-  <link rel="stylesheet" href="news.css">
+  	<link rel="stylesheet" href="news.css">
  
   
-  <title>Food Bank Art Work</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  	<title>Food Bank Art Work</title>
+  	<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.min.js"></script>
 	
 
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
- <link rel="stylesheet" href="mystyle.css">	
-  <div class="header">
+	 <link rel="stylesheet" href="mystyle.css">	
+  	<div class="header">
 		<div id="nav-placeholder"></div>
 	  
-	  <script>
-	        
-			
-        	$.get("navigation.html", function(data){
+	<script>
+		$.get("navigation.html", function(data){
            	 $("#nav-placeholder").replaceWith(data);
         	});
-	
-    		</script> 	
+	</script> 	
 	</div>
 	
 	
@@ -46,43 +43,43 @@
 	
 
 	
-	<div class="container">
-		<h2>Interactive Gantt Chart entirely made in SVG!</h2>
-		<div class="gantt-target"></div>
-	</div>
+<div class="container">
+<h2>Interactive Gantt Chart entirely made in SVG!</h2>
+<div class="gantt-target"></div>
+</div>
 	
-	<script>
+<script>
 	var tasks = 
-[	
-  {
-    id: 'Task 1',
-    name: 'SEA MCP',
-    start: '2022-7-15',
-    end: '2022-8-15',
-    progress: 20,
-  },
-  {
-    id: 'Task 2',
-    name: 'CDG MCP',
-    start: '2022-8-15',
-    end: '2022-10-15',
-    progress: 0,
-    
-  },
-  {
-    id: 'Task 3',
-    name: 'DFW MCP',
-    start: '2022-10-15',
-    end: '2022-11-15',
-    progress: 0,
-   
-  },
-]
+	[	
+  	{
+    	id: 'Task 1',
+    	name: 'SEA MCP',
+    	start: '2022-7-15',
+    	end: '2022-8-15',
+    	progress: 20,
+  	},
+  	{
+    	id: 'Task 2',
+    	name: 'CDG MCP',
+    	start: '2022-8-15',
+    	end: '2022-10-15',
+    	progress: 0,
+	},
+  	{
+    	id: 'Task 3',
+    	name: 'DFW MCP',
+    	start: '2022-10-15',
+    	end: '2022-11-15',
+    	progress: 0,
+	},
+	]
 		
-		var gantt_chart = new Gantt(".gantt-target", tasks);
-		gantt_chart.change_view_mode('Month')
+	var gantt_chart = new Gantt(".gantt-target", tasks);
+	gantt_chart.change_view_mode('Month')
 		
-		console.log(gantt_chart);
-	</script>
+	console.log(gantt_chart);
+</script>
+
+
 </body>
 </html>
