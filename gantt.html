@@ -5,6 +5,8 @@
   	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.min.js"></script>
+	<script src="https://www.gstatic.com/charts/loader.js"></script>
+	
 	
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
 	<link rel="stylesheet" href="mystyle.css">	
@@ -34,7 +36,41 @@
 			fill: tomato;
 		}
 	</style>
+<script>
 
+google.charts.load("current", {packages:["timeline"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+    var container = document.getElementById('example5.4');
+    var chart = new google.visualization.Timeline(container);
+    var dataTable = new google.visualization.DataTable();
+    dataTable.addColumn({ type: 'string', id: 'Region' });
+    dataTable.addColumn({ type: 'string', id: 'Site' });
+    dataTable.addColumn({ type: 'date', id: 'Start' });
+    dataTable.addColumn({ type: 'date', id: 'End' });
+    dataTable.addRows([
+      [ 'EMEA',  'AMS',    	new Date(2022,5,1,0,0,0),  new Date(2022,5,14,0,0,0) ],
+      [ 'EMEA',  'LIS',    	new Date(2022,6,1,0,0,0), new Date(2022,6,14,0,0,0) ],
+      [ 'EMEA',  'DUB', 	new Date(2022,7,1,0,0,0), new Date(2022,7,14,0,0,0) ],
+      [ 'EMEA', 'LHR',   	new Date(2022,8,1,0,0,0), new Date(2022,8,14,0,0,0) ],
+      [ 'AMERICAS', 'BOS',      new Date(2022,5,15,0,0,0), new Date(2022,5,30,0,16,0,0) ],
+      [ 'AMERICAS', 'YYZ',      new Date(2022,6,15,0,0,0), new Date(2022,6,30,0,0,0) ],
+      [ 'AMERICAS',   'DFW',    new Date(2022,7,15,0,0,0), new Date(2022,7,30,0,0,0) ],
+      [ 'APAC',   'CDG',        new Date(2022,6,1,0,0,0), new Date(2022,6,15,0,0,0) ],
+      [ 'APAC',   'HKG',        new Date(2022,7,1,16,30,0), new Date(2022,7,15,0,0,0) ]],
+                     
+                     );
+
+    var options = {
+      	timeline: { colorByRowLabel: true },
+ 	tooltip: {isHtml: true},
+      	alternatingRowStyle: false
+    };
+	  
+    chart.draw(dataTable, options);
+  }
+</script>
+	
 </head>
 <body>
 	
@@ -75,5 +111,9 @@
 </script>
 
 
+	<div id="example5.4" style="height: 500px;"></div>
+	
+	
+	
 </body>
 </html>
