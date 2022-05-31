@@ -1,24 +1,22 @@
-<head>
-  	<link rel="stylesheet" href="news.css">
- 
-  
+<head>  
   	<title>Food Bank Art Work</title>
   	<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1">
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
+  	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.min.js"></script>
 	
-
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/frappe-gantt/0.6.1/frappe-gantt.css">
-	 <link rel="stylesheet" href="mystyle.css">	
-  	<div class="header">
+	<link rel="stylesheet" href="mystyle.css">	
+  	
+	<div class="header">
 		<div id="nav-placeholder"></div>
-	  
-	<script>
+		
+		<script>
 		$.get("navigation.html", function(data){
            	 $("#nav-placeholder").replaceWith(data);
         	});
-	</script> 	
+		</script> 	
 	</div>
 	
 	
@@ -40,12 +38,9 @@
 </head>
 <body>
 	
-	
-
-	
 <div class="container">
-<h2>Interactive Gantt Chart entirely made in SVG!</h2>
-<div class="gantt-target"></div>
+	<h2>Interactive Gantt Charts entirely made in SVG!</h2>
+	<div class="gantt-target"></div>
 </div>
 	
 <script>
@@ -77,7 +72,6 @@
 	var gantt_chart = new Gantt(".gantt-target", tasks);
 	gantt_chart.change_view_mode('Month')
 		
-	console.log(gantt_chart);
 </script>
 
 
