@@ -1,5 +1,6 @@
 name = "my-pages-project"
 compatibility_date = "2025-09-22"
+pages_build_output_dir = "public"
 
 [env.production]
 
