@@ -1,0 +1,6 @@
+name = "my-pages-project"
+compatibility_date = "2025-09-22"
+
+[env.production]
+
+[env.preview]
