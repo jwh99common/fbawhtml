@@ -15,7 +15,7 @@ async function handleRequest(request) {
   }
 console.log ('z');
 
-  return new Response('Hello worker!', {
+  return new Response('Hello john!', {
     headers: {
       'content-type': 'text/html',
       "Access-Control-Allow-Origin": "*"
